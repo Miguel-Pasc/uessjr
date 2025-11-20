@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conócenos - Universidad Mexiquense del Bicentenario</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- NAVBAR (mismo que el resto del sitio) -->
+  <nav>
+    <img src="img/logo.png" alt="Logo UMB">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="oferta.html">Oferta Académica</a></li>
+      <li><a href="beneficios.html">Beneficios</a></li>
+      <li><a href="historia.html">Historia</a></li>
+    </ul>
+    <button id="modo-btn">Modo Oscuro</button>
+  </nav>
+
+  <main>
+    <section class="conocenos-container">
+
+      <!-- Títulos -->
+      <h1 class="conocenos-title">Conócenos</h1>
+      <h2 class="conocenos-subtitle">Historia</h2>
+
+      <!-- BLOQUE HISTORIA -->
+      <article class="historia-section" aria-labelledby="historia-title">
+        <div class="historia-text" id="historia-title">
+          <!-- Aquí pega tu texto de la historia -->
+          <p><strong>Fundación y trayectoria:</strong></p>
+          <p>
+            <!-- Ejemplo de texto (reemplázalo por tu texto institucional) -->
+            La Universidad Mexiquense del Bicentenario fue fundada con el propósito de ofrecer educación de calidad...
+            (aquí pega tu texto completo sobre la historia)
+          </p>
+
+          <p style="margin-top:12px;"><strong>Logros relevantes:</strong></p>
+          <p>
+            - Primer campus en la región en implementar programas sustentables.<br>
+            - Convenios con instituciones nacionales e internacionales.
+          </p>
+        </div>
+
+        <figure class="historia-image" aria-hidden="false">
+          <img src="img/universidad.jpg" alt="Edificio principal de la Universidad Mexiquense del Bicentenario">
+          <figcaption class="caption">Campus central</figcaption>
+        </figure>
+      </article>
+
+      <!-- OTROS DATOS: Misión / Visión / Valores -->
+      <section class="otros-datos" aria-label="Misión, Visión y Valores">
+        <div class="dato-card" role="region" aria-labelledby="mision-title">
+          <h3 id="mision-title">Misión</h3>
+          <p>
+            Aquí va la misión institucional. Reemplaza este texto con la misión proporcionada por la universidad.
+          </p>
+        </div>
+
+        <div class="dato-card" role="region" aria-labelledby="vision-title">
+          <h3 id="vision-title">Visión</h3>
+          <p>
+            Aquí va la visión institucional. Reemplaza este contenido con la visión oficial.
+          </p>
+        </div>
+
+        <div class="dato-card" role="region" aria-labelledby="valores-title">
+          <h3 id="valores-title">Valores</h3>
+          <p>
+            Aquí van los valores institucionales (ej. integridad, compromiso, innovación, respeto).
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="contacto-section" aria-label="Contacto de la universidad">
+        <div class="contacto-left">
+          <h3 style="color:var(--verde-oscuro); margin-bottom:8px;">Datos de contacto</h3>
+          <ul class="contacto-list">
+            <li><strong>Ubicación:</strong> Calle Ejemplo #123, Ciudad, Estado.</li>
+            <li><strong>Encargado:</strong> Nombre del encargado</li>
+            <li><strong>Teléfono:</strong> +52 55 1234 5678</li>
+            <li><strong>Correo:</strong> info@umb.edu.mx</li>
+            <li><strong>Horario:</strong> Lunes a Viernes, 8:00 - 18:00</li>
+          </ul>
+        </div>
+
+        <div class="contacto-right" aria-hidden="true">
+          <!-- Aquí puedes dejar un mapa embebido más tarde, o una imagen pequeña -->
+          <div style="background:var(--gris-claro); padding:16px; border-radius:8px; min-height:120px;">
+            <p style="margin:0; color:var(--texto);">Mapa o dirección visual (se puede integrar Google Maps o una imagen).</p>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- FOOTER (igual que en las demás páginas) -->
+  <footer>
+    <p>Síguenos en redes sociales:</p>
+    <a href="#" aria-label="Facebook UMB">Facebook</a>
+    <a href="#" aria-label="YouTube UMB">YouTube</a>
+    <a href="#" aria-label="Instagram UMB">Instagram</a>
+    <p>© Universidad Mexiquense del Bicentenario</p>
+  </footer>
+
+<script>
+  // MODO OSCURO - reutiliza el mismo botón que en las otras páginas
+  const btn = document.getElementById("modo-btn");
+  btn.onclick = () => {
+    document.body.classList.toggle("dark-mode");
+    btn.textContent =
+      document.body.classList.contains("dark-mode")
+      ? "Modo Claro"
+      : "Modo Oscuro";
+  };
+</script>
+
+</body>
+</html>

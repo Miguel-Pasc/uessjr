@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Oferta Académica - UMB</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <img src="img/logo.png" alt="Logo UMB">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="oferta.html">Oferta Académica</a></li>
+      <li><a href="beneficios.html">Beneficios</a></li>
+      <li><a href="historia.html">Historia</a></li>
+    </ul>
+    <button id="modo-btn">Modo Oscuro</button>
+  </nav>
+
+  <main>
+
+    <h1 style="text-align:center; margin-top:20px;">Oferta Académica</h1>
+    <p style="text-align:center; max-width:900px; margin:10px auto;">
+      Aquí puedes escribir una breve descripción institucional de la oferta académica de la Universidad Mexiquense del Bicentenario.
+    </p>
+
+    <!-- ===========================
+         CARRERA 1: CONTADURÍA
+         =========================== -->
+    <section class="carrera">
+      <h2>Licenciatura en Contaduría</h2>
+      <div class="contenido">
+        <!-- Imagen izquierda -->
+        <img src="img/contaduria.jpg" alt="Licenciatura en Contaduría">
+
+        <!-- Texto derecha -->
+        <div class="texto">
+          <p><strong>Descripción:</strong> Aquí va la descripción oficial de la Licenciatura en Contaduría.</p>
+          <br>
+          <p><strong>Asignaturas destacadas:</strong></p>
+          <ul>
+            <li>Contabilidad Financiera</li>
+            <li>Auditoría</li>
+            <li>Finanzas Corporativas</li>
+          </ul>
+          <br>
+          <p><strong>Duración:</strong> X cuatrimestres</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         CARRERA 2: SISTEMAS
+         =========================== -->
+    <section class="carrera reverse">
+      <h2 style="text-align:right;">Ingeniería en Sistemas Computacionales</h2>
+      <div class="contenido">
+        
+        <!-- Imagen derecha -->
+        <img src="img/sistemas.jpg" alt="Ingeniería en Sistemas Computacionales">
+
+        <!-- Texto izquierda -->
+        <div class="texto">
+          <p><strong>Descripción:</strong> Aquí va la descripción oficial de la Ingeniería en Sistemas Computacionales.</p>
+          <br>
+          <p><strong>Asignaturas destacadas:</strong></p>
+          <ul>
+            <li>Desarrollo Web</li>
+            <li>Redes de Computadoras</li>
+            <li>Bases de Datos</li>
+          </ul>
+          <br>
+          <p><strong>Duración:</strong> X cuatrimestres</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         CARRERA 3: INNOVACIÓN AGRÍCOLA
+         =========================== -->
+    <section class="carrera">
+      <h2>Ingeniería en Innovación Agrícola Sustentable</h2>
+      <div class="contenido">
+
+        <!-- Imagen izquierda -->
+        <img src="img/agricola.jpg" alt="Ingeniería en Innovación Agrícola Sustentable">
+
+        <!-- Texto derecha -->
+        <div class="texto">
+          <p><strong>Descripción:</strong> Aquí va la descripción oficial de la Ingeniería en Innovación Agrícola Sustentable.</p>
+          <br>
+          <p><strong>Asignaturas destacadas:</strong></p>
+          <ul>
+            <li>Agroecología</li>
+            <li>Sistemas de Riego</li>
+            <li>Tecnologías Sustentables</li>
+          </ul>
+          <br>
+          <p><strong>Duración:</strong> X cuatrimestres</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Síguenos en redes sociales:</p>
+    <a href="#">Facebook</a>
+    <a href="#">YouTube</a>
+    <a href="#">Instagram</a>
+    <p>© Universidad Mexiquense del Bicentenario</p>
+  </footer>
+
+<script>
+  const btn = document.getElementById("modo-btn");
+
+  btn.onclick = () => {
+    document.body.classList.toggle("dark-mode");
+
+    btn.textContent =
+      document.body.classList.contains("dark-mode")
+      ? "Modo Claro"
+      : "Modo Oscuro";
+  };
+</script>
+
+</body>
+</html>
