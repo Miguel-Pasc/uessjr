@@ -1,10 +1,8 @@
-// js/news.js
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById('newsTrack');
   const prevBtn = document.querySelector('.news-btn.prev');
   const nextBtn = document.querySelector('.news-btn.next');
 
-  // elementos originales (2)
   const originalCards = Array.from(track.querySelectorAll('.news-card'));
 
   // guardamos el ancho dinámico (incluyendo gap)
@@ -15,51 +13,40 @@ document.addEventListener("DOMContentLoaded", () => {
     return card.getBoundingClientRect().width + gap;
   }
 
-  // CLONAR para efecto infinito: clonamos los originales una vez
-  // (si hay solo 2, con esto ya hay suficientes para desplazarse)
   originalCards.forEach(card => {
     const clone = card.cloneNode(true);
     clone.classList.add('clone');
     track.appendChild(clone);
   });
 
-  // recalcula en resize
   let currentIndex = 0;
-  let step = Math.round(cardFullWidth(originalCards[0])); // pixel por desplazamiento
+  let step = Math.round(cardFullWidth(originalCards[0]));
   window.addEventListener('resize', () => {
     step = Math.round(cardFullWidth(originalCards[0]));
   });
 
-  // Mover a la derecha
   function moveNext() {
     currentIndex++;
     track.style.transition = 'transform 0.45s ease';
     track.style.transform = `translateX(-${currentIndex * step}px)`;
 
-    // si llegamos al final de los originales (index == originals.length)
-    if (currentIndex === originalCards.length) {
-      // al terminar la transición, reset sin animación
+    if (currentIndex === originalCards.length) {      
       setTimeout(() => {
         track.style.transition = 'none';
         currentIndex = 0;
-        track.style.transform = `translateX(0px)`;
-        // forzar reflow para que la siguiente transición funcione correctamente
+        track.style.transform = `translateX(0px)`;        
         void track.offsetWidth;
       }, 460);
     }
   }
 
-  // Mover a la izquierda
   function movePrev() {
     if (currentIndex === 0) {
-      // moverse inmediatamente al clon final
       track.style.transition = 'none';
       currentIndex = originalCards.length;
-      track.style.transform = `translateX(-${currentIndex * step}px)`;
-      // force reflow
+      track.style.transform = `translateX(-${currentIndex * step}px)`;      
       void track.offsetWidth;
     }
-    // luego desplazamos una posición a la izquierda
     currentIndex--;
     track.style.transition = 'transform 0.45s ease';
     track.style.transform = `translateX(-${currentIndex * step}px)`;
