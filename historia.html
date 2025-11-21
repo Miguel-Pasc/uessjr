@@ -11,181 +11,111 @@
 
 <body>
 
-    <!-- NAVBAR (mismo que el resto del sitio) -->
     <nav class="navbar">
-        <!-- LOGO -->
-        <img src="img/icons/sanjose.png" alt="Logo UMB" />
+        <a href="/">
+            <img src="img/icons/sanjose.png" alt="Logo UMB" />
+        </a>
 
-        <!-- MENÚ NORMAL (solo PC) -->
         <ul id="menu" class="navbar-links">
-            <li><a href="index.html">Inicio</a></li>
             <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="/#noticias">Noticias</a></li>
             <li><a href="beneficios.html">Beneficios</a></li>
             <li><a href="historia.html">Conócenos</a></li>
         </ul>
 
-        <!-- BOTÓN MODO OSCURO -->
         <button id="modo-btn">Modo Oscuro</button>
 
-        <!-- BOTÓN HAMBURGUESA (solo móvil) -->
         <button id="menu-btn" class="menu-btn">&#9776;</button>
     </nav>
 
-    <!-- MENÚ LATERAL -->
     <nav id="mobile-menu" class="mobile-menu">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
             <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="/#noticias">Noticias</a></li>
             <li><a href="beneficios.html">Beneficios</a></li>
             <li><a href="historia.html">Conócenos</a></li>
         </ul>
     </nav>
-
 
     <main>
         <section class="conocenos-container">
 
-            <!-- Títulos -->
             <h1 class="conocenos-title">Conócenos</h1>
 
-            <!-- BLOQUE HISTORIA -->
-            <article class="historia-section" aria-labelledby="historia-title">
-                <div class="historia-text" id="historia-title">
-                    <!-- Aquí pega tu texto de la historia -->
+            <article class="historia-section">
+                <div class="historia-text">
                     <h3 style="color:var(--verde-oscuro); margin-bottom:8px;">Historia</h3>
+
                     <p style="text-align: justify;">
-                        Mejía G. y González J. (2018) describen que inicialmente, durante el ciclo escolar 2015 -
-                        2016 las escuelas de educación superior en el Estado de México en su mayoría eran
-                        escuelas privadas (teniendo el 40% del total de estudiantes del estado), siendo alrededor
-                        de las dos terceras partes del total de escuelas, mientras que solo una tercera parte
-                        pertenecían a escuelas públicas (teniendo al 60% de alumnos del total de estudiantes del
-                        estado). Sin embargo, los planteles estaban ubicados en las zonas metropolitanas,
-                        principalmente en las zonas del Valle de México, seguido de Toluca y finalmente
-                        Tianguistenco, todas estas zonas próximas a la Ciudad de México.
-                        Pero al estar ubicados todos en solo las zonas más desarrolladas, los alumnos de los
-                        municipios más lejanos, rurales y marginados, tenían pocas o ninguna opción para
-                        estudiar en un plantel de educación superior, principalmente por la falta de recursos
-                        económicos y medios de transporte para trasladarse desde su hogar hasta un plantel.
-                        Debido a esta situación, surge la Universidad Mexiquense del Bicentenario.
-                        Bajo la administración de Vicente Fox Quesada, el Gobierno Federal, a través de
-                        la Secretaría de Educación, y el Gobierno del Estado de México, suscribieron el Convenio
-                        de Coordinación para la Creación y Apoyo Financiero de la UMB como organismo público
-                        descentralizado del Poder Ejecutivo del Estado de México, con personalidad jurídica y
-                        patrimonio propios con sede en el municipio de Ocoyoacac. Los compromisos de esta
-                        administración en materia educativa fueron: incrementar la oferta de educación de nivel
-                        superior, mejorar la calidad en el servicio y aumentar la cobertura en cada una de las
-                        regiones del estado. (Mejía G. y González J., 2018).
-                        En 2009, se establece que se crearían 22 planteles de la UMB que se ubicarían en los
-                        municipios con menor o nulo acceso a la educación superior. Dentro de los primeros
-                        planteles creados se encuentra la Universidad Mexiquense del Bicentenario San José del
-                        Rincón, creado el 1 de septiembre de 2010. Posteriormente se crearon otras 8 sedes,
-                        sumando un total de 30 planteles, de los cuales 7 se ubicaban en lugares sin nada de
-                        acceso al nivel superior, y 15 ubicadas en lugares con poco acceso al nivel superior. En
-                        15
-                        el año de 2022 se informa que se cuenta con 34 planteles distribuidos estratégicamente
-                        en todo el Estado de México. (umb modelo educativo, 2022).
+                        Mejía G. y González J. (2018) describen que inicialmente, durante el ciclo escolar 2015 - 2016 las
+                        escuelas de educación superior en el Estado de México en su mayoría eran escuelas privadas (teniendo
+                        el 40% del total de estudiantes del estado), siendo alrededor de las dos terceras partes del total de
+                        escuelas, mientras que solo una tercera parte pertenecían a escuelas públicas (teniendo al 60% de
+                        alumnos del total de estudiantes del estado). Sin embargo, los planteles estaban ubicados en las zonas
+                        metropolitanas […]
+                        En 2022 se informa que se cuenta con 34 planteles distribuidos estratégicamente en todo el Estado de
+                        México. (UMB modelo educativo, 2022).
                     </p>
                 </div>
 
-                <figure class="historia-image" aria-hidden="false">
-                    <img src="img/backgrounds/fondo_historia.jpeg"
-                        alt="Edificio principal de la Universidad Mexiquense del Bicentenario">
+                <figure class="historia-image">
+                    <img src="img/backgrounds/fondo_historia.jpeg" alt="Edificio principal de la Universidad Mexiquense del Bicentenario">
                     <figcaption class="caption">UES San José del Rincón</figcaption>
                 </figure>
             </article>
 
-            <!-- OTROS DATOS: Misión / Visión / Valores -->
-            <section class="otros-datos" aria-label="Misión, Visión y Valores">
-                <div class="dato-card" role="region" aria-labelledby="mision-title">
-                    <h3 id="mision-title">Misión</h3>
+            <section class="otros-datos">
+
+                <div class="dato-card">
+                    <h3>Misión</h3>
                     <p style="text-align: justify;">
-                        Formar profesionistas íntegros, críticos y solidarios, capaces de comprender y actuar en un
-                        mundo en constante transformación. La UMB impulsa una formación integral de calidad, con base en
-                        el desarrollo de conocimientos, habilidades, competencias, actitudes y valores, que favorezcan
-                        la inclusión, la equidad, el desarrollo sostenible y la responsabilidad social, para contribuir
-                        al progreso regional, estatal y nacional.
-                    <p style="text-align: center;"><strong>“Formamos sueños, transformamos vidas, construimos
-                            futuro.”</strong></p>
+                        Formar profesionistas íntegros, críticos y solidarios, capaces de comprender y actuar en un mundo en
+                        constante transformación. La UMB impulsa una formación integral de calidad.
+                    </p>
+                    <p style="text-align: center;"><strong>“Formamos sueños, transformamos vidas, construimos futuro.”</strong></p>
+                </div>
+
+                <div class="dato-card">
+                    <h3>Visión</h3>
+                    <p style="text-align: justify;">
+                        Ser una institución de educación superior pública reconocida por su excelencia académica, compromiso
+                        social e impacto en el desarrollo sostenible.
                     </p>
                 </div>
 
-                <div class="dato-card" role="region" aria-labelledby="vision-title">
-                    <h3 id="vision-title">Visión</h3>
-                    <p style="text-align: justify;">
-                        Ser una institución de educación superior pública reconocida en el Estado de México y a nivel
-                        nacional, por su excelencia académica, su compromiso social y su impacto en el desarrollo
-                        sostenible. La UMB aspira a consolidarse como un nodo de transformación y desarrollo regional,
-                        mediante programas educativos pertinentes, flexibles y vinculados con los sectores productivos y
-                        sociales, fomentando una sociedad inclusiva, justa y equitativa.
-                    </p>
-                </div>
+                <div class="dato-card">
+                    <h3>Valores</h3>
 
-                <div class="dato-card" role="region" aria-labelledby="valores-title">
-                    <h3 id="valores-title">Valores</h3>
-                    <p>
-                    <ul style="list-style-type: none; text-align: justify;" class="valores">
+                    <ul class="valores" style="list-style:none; text-align:justify;">
                         <li class="valor1">
                             <strong>Verdad</strong>
-                            <p>
-                                Es el fundamento del auténtico conocimiento y de la persona en la que no hay doblez.
-                                Indispensable para una Institución Educativa.
-                            </p>
+                            <p>Fundamento del auténtico conocimiento y la transparencia.</p>
                         </li>
                         <li class="valor2">
                             <strong>Trascendencia</strong>
-                            <p>
-                                Fundamento para rebasar los paradigmas establecidos y buscar nuevos significados del
-                                conocimiento, la verdad, la belleza. Es el detonante de una auténtica espiritualidad.
-                            </p>
+                            <p>Superar paradigmas para buscar nuevos significados del conocimiento.</p>
                         </li>
                         <li class="valor3">
                             <strong>Compromiso</strong>
-                            <p>
-                                Comprometerse va más allá de cumplir con una obligación, es poner en juego nuestras
-                                capacidades
-                                para sacar adelante todo aquello que se nos ha confiado. Es un aspecto fundamental del
-                                emprendedor.
-                            </p>
+                            <p>Cumplir con dedicación y responsabilidad todo lo que se nos confía.</p>
                         </li>
                         <li class="valor4">
                             <strong>Lealtad</strong>
-                            <p>
-                                Cumplimiento de lo que exigen las leyes de la fidelidad y las del honor, es el amor y la
-                                gratitud que muestran las personas hacia sus amigos, padres, compañeros, etc. Aspecto
-                                fundamental para la persona del siglo XXI.
-                            </p>
+                            <p>Fidelidad, honor y gratitud hacia quienes nos rodean.</p>
                         </li>
                         <li class="valor5">
                             <strong>Servicio</strong>
-                            <p>
-                                Brindar ayuda de manera espontánea en los detalles pequeños de manera diligente; habla
-                                de
-                                nuestro alto sentido de colaboración para hacer la vida más ligera a los demás.
-                                Fundamento
-                                de la
-                                auténtica vocación.
-                            </p>
+                            <p>Ayudar con disposición y espíritu de colaboración.</p>
                         </li>
                         <li class="valor6">
                             <strong>Humanismo</strong>
-                            <p>
-                                Se fundamenta en el valor de los seres humanos, dándole mayor importancia al pensamiento
-                                crítico
-                                y a lo racional, impulsando las potencialidades de la comunidad universitaria para
-                                ofrecer a
-                                la
-                                sociedad profesionales más justos, de trato equitativo, que fomenten los valores
-                                humanos,
-                                ante
-                                los procesos culturales y sociales.
-                            </p>
+                            <p>Impulsar el pensamiento crítico y los valores humanos.</p>
                         </li>
                     </ul>
-                    </p>
+
                 </div>
             </section>
 
-            <!-- Formulario de contacto -->
             <section id="contacto" class="contacto-container">
                 <h2 class="contacto-titulo">Contacto</h2>
 
@@ -209,8 +139,7 @@
 
                         <div class="campo">
                             <label for="motivo">Mensaje</label>
-                            <textarea id="motivo" name="motivo" rows="5" placeholder="Escribe tu mensaje aquí..."
-                                required></textarea>
+                            <textarea id="motivo" name="motivo" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
                         </div>
 
                         <div class="btn-centro">
@@ -223,27 +152,22 @@
                 </section>
             </section>
 
-
         </section>
     </main>
 
-    <!-- FOOTER (igual que en las demás páginas) -->
     <footer class="footer">
 
         <div class="footer-grid">
 
-            <!-- COLUMNA 1 → Datos de contacto (1) -->
             <div class="footer-col">
                 <h3>Contacto</h3>
                 <ul>
                     <li><strong>Coordinador:</strong> Lcdo. Luis Ramón Vega Ramírez</li>
-                    <li><strong>Clave de Institución:</strong>15ESU0016J</li>
-                    <li><strong>Dirección:</strong> AVENIDA UNIVERSIDAD SN, COLONIA LAS TINAJAS, 50660 SAN JOSÉ DEL
-                        RINCÓN, SAN JOSÉ DEL RINCÓN, ESTADO DE MÉXICO.</li>
+                    <li><strong>Clave de Institución:</strong> 15ESU0016J</li>
+                    <li><strong>Dirección:</strong> AVENIDA UNIVERSIDAD SN, COLONIA LAS TINAJAS, 50660 SAN JOSÉ DEL RINCÓN</li>
                 </ul>
             </div>
 
-            <!-- COLUMNA 2 → Datos de contacto (2) -->
             <div class="footer-col">
                 <h3>Información</h3>
                 <ul>
@@ -253,37 +177,31 @@
                 </ul>
             </div>
 
-            <!-- COLUMNA 3 → Mapa -->
             <div class="footer-col">
                 <h3>Ubicación</h3>
-                <!-- Aquí puedes insertar tu iframe de Google Maps -->
                 <div class="mapa">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.0764396116497!2d-100.14432692373792!3d19.666743981663235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2eccbc758302b%3A0x6277bfbed3b52399!2sUnidad%20de%20Estudios%20Superiores%2C%20San%20Jos%C3%A9%20del%20Rinc%C3%B3n!5e0!3m2!1sen!2smx!4v1763739371596!5m2!1sen!2smx"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.0764396116497!2d-100.14432692373792!3d19.666743981663235"
+                        width="600" height="450" loading="lazy"></iframe>
                 </div>
             </div>
 
-            <!-- COLUMNA 4 → Redes sociales -->
             <div class="footer-col">
                 <h3>Síguenos</h3>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/share/1D7zEUbNBd/" aria-label="Facebook UMB" title="Umb San José del Rincón">
-                        <img src="img/icons/facebook.png" alt="Perfil UMBSJR" title="Perfil UMBSJR">
+                    <a href="https://www.facebook.com/share/1D7zEUbNBd/">
+                        <img src="img/icons/facebook.png" alt="Perfil UMBSJR">
                         Perfil Umb San José del Rincón
                     </a>
-                    <a href="https://www.facebook.com/share/1CZ2YpafD7/" aria-label="YouTube UMB" title="UES San José del Rincón">
-                        <img src="img/icons/facebook.png" alt="Página UMBSJR" title="Página UMBSJR">
+                    <a href="https://www.facebook.com/share/1CZ2YpafD7/">
+                        <img src="img/icons/facebook.png" alt="Página UMBSJR">
                         Página UES San José del Rincón
-                    </a>                    
+                    </a>
                 </div>
                 <h3>Estudiantes inscritos</h3>
                 <div class="inscritos">
                     <a href="http://sidiumb.umb.edu.mx:8088/">
-                        <img src="/img/icons/sidiumb.jpg" alt="sidiumb" title="SIDIUMB">
-                        SIDIUMB
+                        <img src="/img/icons/sidiumb.jpg" alt="sidiumb"> SIDIUMB
                     </a>
                 </div>
             </div>
@@ -293,7 +211,6 @@
         <p class="footer-copy">© Universidad Mexiquense del Bicentenario</p>
 
     </footer>
-
 
     <script src="js/darkmode.js"></script>
 
@@ -305,7 +222,6 @@
             mobileMenu.classList.toggle("open");
         });
 
-        // Cerrar si el usuario toca fuera
         document.addEventListener("click", (e) => {
             if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 mobileMenu.classList.remove("open");

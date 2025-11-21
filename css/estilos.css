@@ -1,22 +1,15 @@
-/* ===========================
-   PALETA INSTITUCIONAL
-   =========================== */
 :root {
-    /* Modo claro */
     --verde: #89d631;
     --verde-oscuro: #4a7d0e;
     --blanco: #ffffff;
     --negro: #111111;
-
     --gris-claro: #f4f4f4;
     --gris: #d9d9d9;
     --gris-oscuro: #333333;
-
     --texto: var(--negro);
     --fondo: var(--blanco);
 }
 
-/* Modo oscuro */
 .dark-mode {
     --texto: var(--blanco);
     --fondo: #0e0e0e;
@@ -24,13 +17,10 @@
     --gris: #2a2a2a;
 }
 
-/* ===========================
-   RESET BÁSICO
-   =========================== */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
@@ -40,10 +30,6 @@ body {
     line-height: 1.6;
 }
 
-/* ===========================
-   NAVBAR FIJO
-   =========================== */
-
 nav {
     position: fixed;
     top: 0;
@@ -51,33 +37,18 @@ nav {
     width: 100%;
     padding: 12px 25px;
     z-index: 1000;
-
-    /* Fondo semitransparente */
-    background: rgba(255, 255, 255, 0.5);
-
-
-    /* Degradado suave hacia abajo */
-    background: linear-gradient(to bottom,
-            rgba(255, 255, 255, 0.85),
-            rgba(255, 255, 255, 0.60));
-
-    /* Efecto vidrio */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.60));
     backdrop-filter: blur(20px);
-
-    /* Bordes suaves */
     border-bottom: 1px solid rgba(137, 214, 49, 0.4);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Logo */
 nav img {
-    height: 45px;
+    height: 45px
 }
 
-/* Menú */
 nav ul {
     list-style: none;
     display: flex;
@@ -88,77 +59,59 @@ nav a {
     text-decoration: none;
     color: var(--texto);
     font-weight: bold;
-    transition: 0.3s;
+    transition: color .3s;
 }
 
-/* Hover verde institucional */
 nav a:hover {
-    color: var(--verde);
+    color: var(--verde)
 }
 
-/* Botón modo oscuro */
 #modo-btn {
     background: transparent;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background .3s;
 }
 
 #modo-btn:hover {
     width: 51px;
-    transition: 0.3s;
+    transition: .3s
 }
 
-/* ===========================
-   NAV MODO OSCURO
-   =========================== */
 .dark-mode nav {
-    background: rgba(20, 20, 20, 0.75);
-    background: linear-gradient(to bottom,
-            rgba(20, 20, 20, 0.85),
-            rgba(20, 20, 20, 0.50));
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.50));
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(137, 214, 49, 0.4);
 }
 
 .dark-mode nav a {
-    color: var(--blanco);
+    color: var(--blanco)
 }
 
 .dark-mode nav a:hover {
-    color: var(--verde);
+    color: var(--verde)
 }
 
-
-/* ===========================
-   FOOTER
-   =========================== */
 footer {
-    background: rgba(0, 128, 0, 0.7);
-    color: var(--blanco);
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    background: var(--verde);
+    color: var(--negro);
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: start;
 }
 
 footer a {
     color: var(--negro);
     margin: 0 10px;
-    font-size: 20px;
+    font-size: 20px
 }
 
-/* ===========================
-   CONTENEDOR GENERAL
-   =========================== */
 main {
-    padding: 100px 20px 40px;
-    /* espacio por navbar fija */
+    padding: 100px 20px 40px
 }
 
-/* ===========================
-   RESPONSIVE
-   =========================== */
-@media (max-width: 768px) {
+/* responsive: versión antigua del menú (navbar-links) */
+@media (max-width:768px) {
     nav .navbar-links {
         flex-direction: column;
         background: var(--blanco);
@@ -166,42 +119,34 @@ main {
         top: 60px;
         right: 0;
         padding: 10px;
-        display: none; 
+        display: none;
     }
 
     nav .navbar-links.active {
-        display: flex;
-    }
-
-    #menu-toggle {
-        display: none; /* YA NO SE USA */
+        display: flex
     }
 }
 
-
-/* ===========================
-   OFERTA ACADÉMICA – DISEÑO MODERNO
-   =========================== */
-
+/* oferta académica */
 .carrera {
     max-width: 1100px;
     margin: 50px auto;
     padding: 25px;
     border-radius: 10px;
     background: var(--gris-claro);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
 }
 
 .carrera h2 {
     font-size: 1.9rem;
     margin-bottom: 20px;
-    color: var(--verde-oscuro);
+    color: var(--verde-oscuro)
 }
 
 .carrera .contenido {
     display: flex;
     gap: 30px;
-    align-items: center;
+    align-items: center
 }
 
 .carrera img {
@@ -212,72 +157,63 @@ main {
     border: 3px solid var(--verde);
 }
 
-/* Texto */
 .carrera .texto {
     flex: 1;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.6
 }
 
-/* Alternancia derecha–izquierda */
 .carrera.reverse .contenido {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
     .carrera .contenido,
     .carrera.reverse .contenido {
         flex-direction: column;
-        text-align: center;
+        text-align: center
     }
 
     .carrera img {
-        max-width: 100%;
+        max-width: 100%
     }
 }
 
-
-/* ===========================
-   BENEFICIOS – DISEÑO MODERNO
-   =========================== */
-
+/* beneficios (carrusel) */
 .beneficios-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    position: relative;
+    position: relative
 }
 
 .beneficios-titulo {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 30px;
-    color: var(--verde-oscuro);
+    color: var(--verde-oscuro)
 }
 
-/* Carrusel */
 .carrusel {
     display: flex;
     overflow: hidden;
     position: relative;
-    width: 100%;    
+    width: 100%
 }
 
 .carrusel-track {
     display: flex;
     gap: 20px;
-    transition: transform 0.5s ease;
+    transition: transform .5s ease
 }
 
-/* Tarjetas */
 .beneficio {
     min-width: 375px;
     background: var(--gris-claro);
     border-radius: 10px;
     border: 3px solid var(--verde);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     overflow: hidden;
     text-align: center;
 }
@@ -285,25 +221,24 @@ main {
 .beneficio img {
     width: 100%;
     height: 40vh;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .beneficio .info {
-    padding: 15px;
+    padding: 15px
 }
 
 .beneficio h3 {
     color: var(--verde-oscuro);
     font-size: 1.3rem;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .beneficio p {
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-size: .95rem;
+    line-height: 1.4
 }
 
-/* Flechas del carrusel */
 .carrusel-btn {
     position: absolute;
     top: 50%;
@@ -316,63 +251,54 @@ main {
     height: 45px;
     cursor: pointer;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .carrusel-btn:hover {
-    background: var(--verde-oscuro);
+    background: var(--verde-oscuro)
 }
 
 .btn-left {
-    left: -10px;
+    left: -10px
 }
 
 .btn-right {
-    right: -10px;
+    right: -10px
 }
 
-/* Modo oscuro */
 .dark-mode .beneficio {
     background: var(--gris);
-    border-color: var(--verde);
+    border-color: var(--verde)
 }
 
 .dark-mode .beneficio h3,
 .dark-mode .beneficio p {
-    color: var(--blanco);
+    color: var(--blanco)
 }
 
 .dark-mode .carrusel-btn {
-    color: var(--negro);
+    color: var(--negro)
 }
 
-
-
-/* ===========================
-   HISTORIA / CONÓCENOS
-   =========================== */
-
-/* Contenedor principal */
+/* historia / conocenos */
 .conocenos-container {
     max-width: 1200px;
     margin: 40px auto;
-    padding: 30px 20px;
+    padding: 30px 20px
 }
 
-/* Títulos */
 .conocenos-title {
     text-align: center;
     font-size: 2.2rem;
     color: var(--verde-oscuro);
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
-/* BLOQUE HISTORIA: dos columnas */
 .historia-section {
     background: var(--gris-claro);
     border-radius: 12px;
     padding: 26px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
     margin-bottom: 36px;
     display: flex;
     gap: 30px;
@@ -385,51 +311,47 @@ main {
     line-height: 1.7;
     color: var(--texto);
     min-width: 260px;
-    padding-right: 10px;
+    padding-right: 10px
 }
 
-/* Imagen con degradado overlay */
 .historia-image {
     width: 460px;
     max-width: 45%;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08)
 }
 
 .historia-image img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover
 }
 
-/* overlay negro -> transparente */
 .historia-image::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+    pointer-events: none
 }
 
-/* Texto encima de la imagen (opcional) */
 .historia-image .caption {
     position: absolute;
     left: 14px;
     bottom: 14px;
     color: white;
     font-weight: 600;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .5)
 }
 
-/* OTROS DATOS (Misión, Visión, Valores) */
 .otros-datos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
-    margin-bottom: 36px;
+    margin-bottom: 36px
 }
 
 .dato-card {
@@ -438,22 +360,22 @@ main {
     border-radius: 10px;
     padding: 18px;
     min-height: 160px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .04)
 }
 
 .dato-card h3 {
     margin-bottom: 10px;
     color: var(--verde-oscuro);
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .dato-card p {
     color: var(--texto);
     line-height: 1.5;
-    font-size: 0.95rem;
+    font-size: .95rem
 }
 
-/* CONTACTO */
+/* contacto */
 .contacto-section {
     background: var(--gris-claro);
     border-radius: 10px;
@@ -462,94 +384,85 @@ main {
     gap: 20px;
     align-items: flex-start;
     flex-wrap: wrap;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .04);
 }
 
 .contacto-left {
-    flex: 1 1 320px;
+    flex: 1 1 320px
 }
 
 .contacto-right {
-    flex: 0 0 320px;
+    flex: 0 0 320px
 }
 
 .contacto-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
 .contacto-list li {
     padding: 8px 0;
     color: var(--texto);
-    font-size: 0.98rem;
+    font-size: .98rem
 }
 
-/* pequeños detalles */
 .fila-info {
     display: flex;
     gap: 12px;
-    align-items: center;
+    align-items: center
 }
 
-/* MODO OSCURO ajustes */
 .dark-mode .historia-section {
-    background: var(--gris);
+    background: var(--gris)
 }
 
 .dark-mode .historia-text,
 .dark-mode .dato-card p,
 .dark-mode .contacto-list li {
-    color: var(--blanco);
+    color: var(--blanco)
 }
 
 .dark-mode .dato-card {
     background: transparent;
-    border-color: rgba(137, 214, 49, 0.9);
+    border-color: rgba(137, 214, 49, .9)
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
     .historia-section {
-        flex-direction: column;
+        flex-direction: column
     }
 
     .historia-image {
         max-width: 100%;
         width: 100%;
-        height: 320px;
+        height: 320px
     }
 
     .otros-datos {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
     .contacto-right {
-        flex-basis: 100%;
+        flex-basis: 100%
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width:1000px) {
     .valores p {
         display: none;
         position: relative;
-        width: 100%;
-    }    
+        width: 100%
+    }
 }
 
-
-/* =========================
-   INDEX - HERO y NOTICIAS
-   ========================= */
-
-/* --- HERO --- */
+/* INDEX - HERO y NOTICIAS */
 .hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* opción B: 80% del alto del viewport */
     overflow: hidden;
-    display: block;
+    display: block
 }
 
 .hero-video {
@@ -558,34 +471,22 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    display: block
 }
 
-/* overlay negro -> transparente (para legibilidad) */
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
     pointer-events: none;
-    z-index: 2;
+    z-index: 2
 }
 
-/* opcional: texto encima del hero
-.hero-text {
-  position: absolute;
-  z-index: 3;
-  left: 40px;
-  bottom: 40px;
-  color: white;
-  max-width: 70%;
-}
-*/
-
-/* --- NOTICIAS (carrusel) --- */
+/* noticias (sin giro 3D) */
 .news-section {
     padding: 60px 0 100px;
     background: var(--fondo);
-    position: relative;
+    position: relative
 }
 
 .section-title {
@@ -593,88 +494,64 @@ main {
     color: var(--verde);
     font-size: 2rem;
     margin-bottom: 30px;
-    font-weight: 700;
+    font-weight: 700
 }
 
-/* viewport: recorta y centra */
 .news-viewport {
     width: 88%;
     margin: 0 auto;
     overflow: hidden;
-    position: relative;
+    position: relative
 }
 
-/* track que se desplaza */
 .news-track {
     display: flex;
     gap: 40px;
     align-items: flex-start;
-    transition: transform 0.45s ease;
-    will-change: transform;
+    transition: transform .45s ease;
+    will-change: transform
 }
 
-/* tarjeta */
+/* tarjeta noticia (unificada y sin 3D) */
 .news-card {
-    width: 700px;
-    /* opción A: grandes */
+    width: 520px;
     flex: 0 0 auto;
-    perspective: 1200px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    height: 560px
 }
 
-/* interno para flip  */
-.card-inner {
-    width: 100%;
-    height: 55vh;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.65s;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    /* sombra suave */
-}
-
-
-
-/* Contenedor de la tarjeta */
-.news-card {
-    width: 520px;
-    height: 560px;
-    perspective: none; /* ya no se usa 3D */
-    position: relative;
-}
-
-/* Contenedor interno */
 .card-inner {
     width: 100%;
     height: 100%;
     position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12)
 }
 
-/* CARA FRONTAL (imagen) */
 .card-front {
     position: absolute;
     inset: 0;
     opacity: 1;
-    transition: opacity 0.35s ease;
+    transition: opacity .35s ease
 }
 
 .card-front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block
 }
 
-/* CARA TRASERA (texto) */
 .card-back {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 0.35s ease;
-    background: rgba(0, 0, 0, 0.85);
+    transition: opacity .35s ease;
+    background: rgba(0, 0, 0, .85);
     color: #fff;
     padding: 22px;
     display: flex;
@@ -682,38 +559,35 @@ main {
     align-items: center;
     text-align: left;
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.4
 }
 
-/* EFECTO: cuando pasas el mouse */
-.news-card:hover .card-front,
-.news-card:focus .card-front {
-    opacity: 0;
+/* hover muestra texto (solo en dispositivos que soportan hover) */
+@media (hover:hover) {
+
+    .news-card:hover .card-front,
+    .news-card:focus .card-front {
+        opacity: 0
+    }
+
+    .news-card:hover .card-back,
+    .news-card:focus .card-back {
+        opacity: 1
+    }
 }
 
-.news-card:hover .card-back,
-.news-card:focus .card-back {
-    opacity: 1;
-}
-
-/* MODO OSCURO */
 .dark-mode .card-back {
-    background: rgba(0, 0, 0, 0.92);
+    background: rgba(0, 0, 0, .92)
 }
 
-
-
-
-/* título alineado a la izquierda debajo */
 .news-title.left {
     text-align: left;
     margin-top: 14px;
     color: var(--texto);
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 700
 }
 
-/* buttons (flechas grandes, verde) */
 .news-btn {
     position: absolute;
     top: calc(50% + 20px);
@@ -727,114 +601,90 @@ main {
     font-size: 26px;
     cursor: pointer;
     z-index: 30;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12)
 }
 
 .news-btn:hover {
-    background: var(--verde-oscuro);
+    background: var(--verde-oscuro)
 }
 
 .news-btn.prev {
-    left: 24px;
+    left: 24px
 }
 
 .news-btn.next {
-    right: 24px;
+    right: 24px
 }
 
-/* dark mode tweaks (assumes .dark-mode body or .dark on html) */
 .dark-mode .card-back {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, .85)
 }
-
 
 .dark-mode .news-title.left {
-    color: var(--blanco);
+    color: var(--blanco)
 }
 
-/* responsive: móvil = 1 tarjeta visible y ajuste de tamaños */
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .news-viewport {
-        width: 94%;
+        width: 94%
     }
 
     .news-track {
-        gap: 18px;
+        gap: 18px
     }
 
     .news-card {
         width: 86%;
+        height: auto
     }
 
-    /* una tarjeta visible */
     .card-inner {
-        height: 280px;
+        height: 280px
     }
 
     .news-btn {
         width: 46px;
         height: 46px;
-        font-size: 22px;
+        font-size: 22px
     }
 
     nav ul {
-        display: none;
+        display: none
     }
-
-    /* usa tu menú mobile si lo tienes */
 }
 
-/* muy pequeño */
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .card-inner {
-        height: 240px;
+        height: 240px
     }
 
     .news-title.left {
-        font-size: 1rem;
+        font-size: 1rem
     }
 
     .hero {
-        height: 60vh;
+        height: 60vh
     }
-
-    /* reduce hero en pantallas muy pequeñas */
 }
 
-
-.card-inner.flipped-by-touch {
-    transform: rotateY(180deg);
-}
-
-.card-inner {
-    border: 2px var(--verde) solid;
-}
-
-.carrera .texto {
-    text-align: justify;
-}
-
-.carrera .texto li {
-    list-style-type: square;
-    margin-left: 25px;
-}
-
-
-/* ========== MENÚ HAMBURGUESA ========== */
+/* menú hamburguesa (drawer) */
 .menu-btn {
     display: none;
     font-size: 32px;
     cursor: pointer;
     background: transparent;
     border: none;
-    color: #000;
+    color: #000
 }
 
 body.dark .menu-btn {
-    color: #fff;
+    color: #fff
 }
 
-/* Menú lateral */
+#menu-btn {
+    color: green
+}
+
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -843,98 +693,73 @@ body.dark .menu-btn {
     height: 100%;
     background: #fff;
     border-left: 6px solid #89d631;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, .2);
     padding-top: 80px;
-    transition: left 0.3s ease;
-    z-index: 999;
+    transition: left .3s ease;
+    z-index: 999
 }
 
 body.dark .mobile-menu {
-    background: #111;
+    background: #111
 }
 
 .mobile-menu.open {
-    left: 0;
+    left: 0
 }
 
 .mobile-menu ul {
     list-style: none;
-    padding: 0;
+    padding: 0
 }
 
 .mobile-menu li {
-    margin: 20px;
+    margin: 20px
 }
 
 .mobile-menu a {
     text-decoration: none;
     font-size: 20px;
-    color: inherit;
+    color: inherit
 }
 
 .mobile-menu a:hover {
-    color: #89d631;
+    color: #89d631
 }
 
-/* Versión móvil */
-@media (max-width: 850px) {
+@media (max-width:850px) {
     .menu-btn {
-        display: block;
+        display: block
     }
 
     .navbar-links {
-        display: none;
-    }    
+        display: none
+    }
 }
 
-
-@media (min-width: 851px) {
+@media (min-width:851px) {
     #mobile-menu {
-        display: none;
+        display: none
     }
 }
 
-
-/* Mostrar hamburguesa en móvil */
-@media (max-width: 850px) {
+@media (max-width:850px) {
     #menu-btn {
-        display: block !important;
+        display: block !important
     }
-}
 
-
-@media (max-width: 850px) {
     .mobile-menu ul {
-        display: block !important;
+        display: block !important
     }
+
     .valores p {
-        display: block;
+        display: block
     }
 }
 
-#menu-btn {
-    color: green;
-}
-
-/* background: linear-gradient(180deg,
-   rgba(20,20,20,0.95),
-   rgba(40,40,40,0.90)
-); */
-
-/* .valores p {
-    display: none;
-} */
-
-.valor1:hover p, .valor2:hover p, .valor3:hover p, .valor4:hover p, .valor5:hover p, .valor6:hover p{
-    display: block;
-    transition: left 0.3s ease;
-}
-
-
-/* ===== ACORDEÓN ===== */
+/* acordeón */
 .acordeon {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 40px auto
 }
 
 .acordeon-btn {
@@ -949,57 +774,49 @@ body.dark .mobile-menu {
     cursor: pointer;
     border-radius: 6px;
     margin-bottom: 5px;
-    transition: background 0.3s;
+    transition: background .3s
 }
 
 .acordeon-btn:hover {
-    color: var(--verde-oscuro);
+    color: var(--verde-oscuro)
 }
 
-/* Panel oculto por defecto */
 .acordeon-panel {
     max-height: 0;
     overflow: hidden;
     background: var(--gris-claro);
     border-left: 1px solid var(--verde);
     border-right: 1px solid var(--verde);
-    /* border-bottom: 1px solid var(--verde); */
     border-radius: 0 0 6px 6px;
-    transition: max-height 0.35s ease;
-    padding: 0 15px;
+    transition: max-height .35s ease;
+    padding: 0 15px
 }
 
 .acordeon-panel ul {
-    padding: 15px 0;
+    padding: 15px 0
 }
 
 .acordeon-panel li {
-    margin: 6px 0;
+    margin: 6px 0
 }
 
-/* Modo oscuro */
 .dark-mode .acordeon-btn {
     background: transparent;
-    color: var(--verde-oscuro);
+    color: var(--verde-oscuro)
 }
 
 .dark-mode .acordeon-panel {
     background: #222;
-    color: white;
+    color: #fff
 }
 
 .dark-mode .acordeon-btn:hover {
-    color: var(--verde);
+    color: var(--verde)
 }
 
-
-
-/* =============================
-   CONTACTO
-   ============================= */
-
+/* contacto */
 .contacto-container {
-    padding: 80px 20px;
+    padding: 80px 20px
 }
 
 .contacto-titulo {
@@ -1007,7 +824,7 @@ body.dark .mobile-menu {
     font-weight: bold;
     margin-bottom: 30px;
     color: var(--verde-oscuro);
-    text-align: center;
+    text-align: center
 }
 
 .contacto-box {
@@ -1016,25 +833,24 @@ body.dark .mobile-menu {
     background: var(--blanco);
     padding: 40px 50px;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .1)
 }
 
 .dark-mode .contacto-box {
-    background: var(--gris);
+    background: var(--gris)
 }
 
 .contacto-form {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 22px
 }
 
-/* Campos */
 .campo label {
     display: block;
     font-weight: 600;
     color: var(--texto);
-    margin-bottom: 8px;
+    margin-bottom: 8px
 }
 
 .campo input,
@@ -1045,19 +861,18 @@ body.dark .mobile-menu {
     border-radius: 8px;
     background: var(--gris-claro);
     color: var(--texto);
-    font-size: 1rem;
+    font-size: 1rem
 }
 
 .dark-mode .campo input,
 .dark-mode .campo textarea {
     background: #222;
     color: var(--blanco);
-    border-color: #444;
+    border-color: #444
 }
 
-/* Botón */
 .btn-centro {
-    text-align: center;
+    text-align: center
 }
 
 .btn-enviar {
@@ -1069,30 +884,25 @@ body.dark .mobile-menu {
     cursor: pointer;
     font-weight: bold;
     font-size: 1rem;
-    transition: 0.3s ease;
+    transition: .3s
 }
 
 .btn-enviar:hover {
-    background: var(--verde-oscuro);
+    background: var(--verde-oscuro)
 }
 
 .dark-mode .btn-enviar {
     background: var(--verde);
-    color: var(--negro);
+    color: var(--negro)
 }
 
-
-
-/* =====================================
-   FOOTER INSTITUCIONAL
-   ===================================== */
-
+/* footer institucional */
 .footer {
     background: var(--verde);
     color: var(--negro);
     padding: 40px 20px;
     margin-top: 50px;
-    text-align: start;
+    text-align: start
 }
 
 .footer-grid {
@@ -1100,104 +910,119 @@ body.dark .mobile-menu {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
-/* Títulos */
 .footer-col h3 {
+    text-align: center;
     margin-bottom: 12px;
     color: var(--verde-oscuro);
-    font-size: 1.15rem;
-    text-align: center;
+    font-size: 1.15rem
 }
 
-/* Listas */
 .footer-col ul {
     list-style: none;
-    padding: 0;     
+    padding: 0
 }
 
 .footer-col ul li {
     margin-bottom: 8px;
-    font-size: 0.95rem;    
+    font-size: .95rem
 }
 
-/* Mapa */
 .footer-col .mapa {
     width: 100%;
     height: 160px;
     border-radius: 10px;
     overflow: hidden;
-    border: 3px solid var(--verde-oscuro);
+    border: 3px solid var(--verde-oscuro)
 }
 
 .footer-col .mapa iframe {
     width: 100%;
     height: 100%;
-    border: none;
+    border: none
 }
 
-/* Redes sociales */
-.social-links a, .inscritos a {    
+.social-links a,
+.inscritos a {
     margin-bottom: 8px;
     color: var(--negro);
     font-weight: bold;
-    padding-left: 2clear0px;    
+    padding-left: 2clear0px;
     text-decoration: none;
     font-size: small;
     display: flex;
-    align-items: center;    
+    align-items: center
 }
 
 .social-links a:hover {
-    color: var(--verde-oscuro);    
+    color: var(--verde-oscuro)
 }
 
-/* Derechos de autor */
 .footer-copy {
     text-align: center;
     margin-top: 35px;
-    font-weight: bold;
+    font-weight: bold
 }
 
-/* MODO OSCURO */
 .dark-mode .footer {
-    background: rgba(0, 128, 0, 0.4);
-    color: var(--blanco);
+    background: rgba(0, 128, 0, .4);
+    color: var(--blanco)
 }
 
 .dark-mode .footer-col h3 {
-    color: var(--verde);
+    color: var(--verde)
 }
 
-.dark-mode .social-links a, .dark-mode .inscritos a {
-    color: var(--blanco);
+.dark-mode .social-links a,
+.dark-mode .inscritos a {
+    color: var(--blanco)
 }
 
 .dark-mode .social-links a:hover {
-    color: var(--verde);
+    color: var(--verde)
 }
 
 .dark-mode .footer-col .mapa {
-    border-color: var(--verde);
+    border-color: var(--verde)
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr)
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width:550px) {
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 }
 
-.social-links img, .inscritos img {
+.social-links img,
+.inscritos img {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    margin-right: 10px;
+    margin-right: 10px
+}
+
+#noticias {
+    padding-top: 100px
+}
+
+.valor1:hover p, .valor2:hover p, .valor3:hover p, .valor4:hover p, .valor5:hover p, .valor6:hover p{
+    display: block;
+    transition: left 0.3s ease;
+}
+
+.carrera .contenido p {
+    text-align: justify;
+}
+
+.carrera .contenido li {
+    margin-left: 25px;
+    list-style-type: square;
+    text-align: justify;
 }

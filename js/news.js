@@ -67,24 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   nextBtn.addEventListener('click', moveNext);
   prevBtn.addEventListener('click', movePrev);
-
-  /* --- soporte táctil: toque sobre la tarjeta voltea (toggle) --- */
-  // en móviles es común no depender sólo del :hover; añadimos toggle a cada tarjeta
-  track.querySelectorAll('.news-card').forEach(card => {
-    card.addEventListener('touchstart', (e) => {
-      // evitar que el evento active scroll accidentalmente
-      // toggle la clase 'touched' para forzar flip
-      const inner = card.querySelector('.card-inner');
-      if (inner) {
-        inner.classList.toggle('flipped-by-touch');
-      }
-    });
-  });
-
-  // Si quieres que los flips por touch se auto-remuevan después de X segundos, descomenta:
-  // document.querySelectorAll('.news-card .card-inner').forEach(inner => {
-  //   inner.addEventListener('transitionend', () => {
-  //     setTimeout(() => inner.classList.remove('flipped-by-touch'), 3500);
-  //   });
-  // });
 });

@@ -10,52 +10,43 @@
 
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
-        <!-- LOGO -->
-        <img src="img/icons/sanjose.png" alt="Logo UMB" />
+        <a href="/">
+            <img src="img/icons/sanjose.png" alt="Logo UMB" />
+        </a>
 
-        <!-- MENÚ NORMAL (solo PC) -->
         <ul id="menu" class="navbar-links">
-            <li><a href="index.html">Inicio</a></li>
             <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="/#noticias">Noticias</a></li>
             <li><a href="beneficios.html">Beneficios</a></li>
             <li><a href="historia.html">Conócenos</a></li>
         </ul>
 
-        <!-- BOTÓN MODO OSCURO -->
         <button id="modo-btn">Modo Oscuro</button>
 
-        <!-- BOTÓN HAMBURGUESA (solo móvil) -->
         <button id="menu-btn" class="menu-btn">&#9776;</button>
     </nav>
 
-    <!-- MENÚ LATERAL -->
     <nav id="mobile-menu" class="mobile-menu">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
             <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="/#noticias">Noticias</a></li>
             <li><a href="beneficios.html">Beneficios</a></li>
             <li><a href="historia.html">Conócenos</a></li>
         </ul>
     </nav>
 
-
     <main>
-
         <section class="beneficios-container">
 
             <h1 class="beneficios-titulo">Beneficios</h1>
 
-            <!-- Flechas -->
             <button class="carrusel-btn btn-left" id="btn-left">&#10094;</button>
             <button class="carrusel-btn btn-right" id="btn-right">&#10095;</button>
 
-            <!-- Carrusel -->
             <div class="carrusel">
                 <div class="carrusel-track" id="track">
 
-                    <!-- Tarjeta 1 -->
                     <div class="beneficio">
                         <img src="img/benefits/beca_jef.jpg" alt="Becas UMB">
                         <div class="info">
@@ -64,7 +55,6 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 2 -->
                     <div class="beneficio">
                         <img src="img/benefits/casa.jpeg" alt="Comedores UMB">
                         <div class="info">
@@ -78,27 +68,23 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 3 -->
                     <div class="beneficio">
                         <img src="img/benefits/actividades.jpg" alt="Actividades UMB">
                         <div class="info">
                             <h3>Actividades</h3>
                             <p>Eventos culturales, deportivos y talleres formativos.</p>
                         </div>
-                    </div>                  
+                    </div>
+
                 </div>
             </div>
 
         </section>
-
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
-
         <div class="footer-grid">
 
-            <!-- COLUMNA 1 → Datos de contacto (1) -->
             <div class="footer-col">
                 <h3>Contacto</h3>
                 <ul>
@@ -109,7 +95,6 @@
                 </ul>
             </div>
 
-            <!-- COLUMNA 2 → Datos de contacto (2) -->
             <div class="footer-col">
                 <h3>Información</h3>
                 <ul>
@@ -119,20 +104,17 @@
                 </ul>
             </div>
 
-            <!-- COLUMNA 3 → Mapa -->
             <div class="footer-col">
                 <h3>Ubicación</h3>
-                <!-- Aquí puedes insertar tu iframe de Google Maps -->
                 <div class="mapa">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.0764396116497!2d-100.14432692373792!3d19.666743981663235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2eccbc758302b%3A0x6277bfbed3b52399!2sUnidad%20de%20Estudios%20Superiores%2C%20San%20Jos%C3%A9%20del%20Rinc%C3%B3n!5e0!3m2!1sen!2smx!4v1763739371596!5m2!1sen!2smx"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="600" height="450" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
 
-            <!-- COLUMNA 4 → Redes sociales -->
             <div class="footer-col">
                 <h3>Síguenos</h3>
                 <div class="social-links">
@@ -143,7 +125,7 @@
                     <a href="https://www.facebook.com/share/1CZ2YpafD7/" aria-label="YouTube UMB" title="UES San José del Rincón">
                         <img src="img/icons/facebook.png" alt="Página UMBSJR" title="Página UMBSJR">
                         Página UES San José del Rincón
-                    </a>                    
+                    </a>
                 </div>
                 <h3>Estudiantes inscritos</h3>
                 <div class="inscritos">
@@ -157,18 +139,13 @@
         </div>
 
         <p class="footer-copy">© Universidad Mexiquense del Bicentenario</p>
-
     </footer>
 
     <script>
-        /* ===========================
-           CARRUSEL INFINITO
-           =========================== */
         const track = document.getElementById("track");
         const leftBtn = document.getElementById("btn-left");
         const rightBtn = document.getElementById("btn-right");
 
-        // Función de mover una tarjeta a la izquierda
         function moverIzquierda() {
             track.prepend(track.lastElementChild);
             track.style.transition = "none";
@@ -180,7 +157,6 @@
             });
         }
 
-        // Función de mover una tarjeta a la derecha
         function moverDerecha() {
             track.style.transition = "transform 0.5s ease";
             track.style.transform = "translateX(-340px)";
@@ -206,14 +182,12 @@
             mobileMenu.classList.toggle("open");
         });
 
-        // Cerrar si el usuario toca fuera
         document.addEventListener("click", (e) => {
             if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 mobileMenu.classList.remove("open");
             }
         });
     </script>
-
 
 </body>
 
