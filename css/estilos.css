@@ -806,6 +806,10 @@ main {
     transform: rotateY(180deg);
 }
 
+.card-inner {
+    border: 2px var(--verde) solid;
+}
+
 .carrera .texto {
     text-align: justify;
 }
@@ -986,4 +990,214 @@ body.dark .mobile-menu {
 
 .dark-mode .acordeon-btn:hover {
     color: var(--verde);
+}
+
+
+
+/* =============================
+   CONTACTO
+   ============================= */
+
+.contacto-container {
+    padding: 80px 20px;
+}
+
+.contacto-titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--verde-oscuro);
+    text-align: center;
+}
+
+.contacto-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--blanco);
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.dark-mode .contacto-box {
+    background: var(--gris);
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Campos */
+.campo label {
+    display: block;
+    font-weight: 600;
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris);
+    border-radius: 8px;
+    background: var(--gris-claro);
+    color: var(--texto);
+    font-size: 1rem;
+}
+
+.dark-mode .campo input,
+.dark-mode .campo textarea {
+    background: #222;
+    color: var(--blanco);
+    border-color: #444;
+}
+
+/* Botón */
+.btn-centro {
+    text-align: center;
+}
+
+.btn-enviar {
+    background: var(--verde);
+    color: var(--negro);
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background: var(--verde-oscuro);
+}
+
+.dark-mode .btn-enviar {
+    background: var(--verde);
+    color: var(--negro);
+}
+
+
+
+/* =====================================
+   FOOTER INSTITUCIONAL
+   ===================================== */
+
+.footer {
+    background: var(--verde);
+    color: var(--negro);
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: start;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Títulos */
+.footer-col h3 {
+    margin-bottom: 12px;
+    color: var(--verde-oscuro);
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+/* Listas */
+.footer-col ul {
+    list-style: none;
+    padding: 0;     
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;    
+}
+
+/* Mapa */
+.footer-col .mapa {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--verde-oscuro);
+}
+
+.footer-col .mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Redes sociales */
+.social-links a, .inscritos a {    
+    margin-bottom: 8px;
+    color: var(--negro);
+    font-weight: bold;
+    padding-left: 2clear0px;    
+    text-decoration: none;
+    font-size: small;
+    display: flex;
+    align-items: center;    
+}
+
+.social-links a:hover {
+    color: var(--verde-oscuro);    
+}
+
+/* Derechos de autor */
+.footer-copy {
+    text-align: center;
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+/* MODO OSCURO */
+.dark-mode .footer {
+    background: rgba(0, 128, 0, 0.4);
+    color: var(--blanco);
+}
+
+.dark-mode .footer-col h3 {
+    color: var(--verde);
+}
+
+.dark-mode .social-links a, .dark-mode .inscritos a {
+    color: var(--blanco);
+}
+
+.dark-mode .social-links a:hover {
+    color: var(--verde);
+}
+
+.dark-mode .footer-col .mapa {
+    border-color: var(--verde);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-links img, .inscritos img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
 }
