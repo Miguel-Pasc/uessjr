@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function cardFullWidth(card) {
     const style = getComputedStyle(card);
     const marginRight = parseFloat(style.marginRight || 0);
-    const gap =  parseFloat(getComputedStyle(track).gap || 0);
+    const gap = parseFloat(getComputedStyle(track).gap || 0);
     return card.getBoundingClientRect().width + gap;
   }
 

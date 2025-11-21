@@ -1,133 +1,696 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Oferta Académica - UMB</title>
-  <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>Oferta Académica - UMB</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <img src="img/logo.png" alt="Logo UMB">
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="oferta.html">Oferta Académica</a></li>
-      <li><a href="beneficios.html">Beneficios</a></li>
-      <li><a href="historia.html">Historia</a></li>
-    </ul>
-    <button id="modo-btn">Modo Oscuro</button>
-  </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <img src="img/logo.png" alt="Logo UMB" />
 
-  <main>
+        <!-- MENÚ NORMAL (solo PC) -->
+        <ul id="menu" class="navbar-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="historia.html">Conócenos</a></li>
+        </ul>
 
-    <h1 style="text-align:center; margin-top:20px;">Oferta Académica</h1>
-    <p style="text-align:center; max-width:900px; margin:10px auto;">
-      Aquí puedes escribir una breve descripción institucional de la oferta académica de la Universidad Mexiquense del Bicentenario.
-    </p>
+        <!-- BOTÓN MODO OSCURO -->
+        <button id="modo-btn">Modo Oscuro</button>
 
-    <!-- ===========================
+        <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+        <button id="menu-btn" class="menu-btn">&#9776;</button>
+    </nav>
+
+    <!-- MENÚ LATERAL -->
+    <nav id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="historia.html">Conócenos</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+        <h1 style="text-align:center; margin-top:20px; color: var(--verde-oscuro);">Oferta Académica</h1>
+
+        <!-- ===========================
          CARRERA 1: CONTADURÍA
          =========================== -->
-    <section class="carrera">
-      <h2>Licenciatura en Contaduría</h2>
-      <div class="contenido">
-        <!-- Imagen izquierda -->
-        <img src="img/contaduria.jpg" alt="Licenciatura en Contaduría">
+        <section class="carrera">
+            <h2>Licenciatura en Contaduría</h2>
+            <div class="contenido">
+                <!-- Imagen izquierda -->
+                <img src="img/carrers/lc.jpg" alt="Licenciatura en Contaduría">
 
-        <!-- Texto derecha -->
-        <div class="texto">
-          <p><strong>Descripción:</strong> Aquí va la descripción oficial de la Licenciatura en Contaduría.</p>
-          <br>
-          <p><strong>Asignaturas destacadas:</strong></p>
-          <ul>
-            <li>Contabilidad Financiera</li>
-            <li>Auditoría</li>
-            <li>Finanzas Corporativas</li>
-          </ul>
-          <br>
-          <p><strong>Duración:</strong> X cuatrimestres</p>
-        </div>
-      </div>
-    </section>
+                <!-- Texto derecha -->
+                <div class="texto">
+                    <p><strong>Objetivo:</strong>
+                        Formar profesionales que generen, analicen e interpreten información financiera para la toma de
+                        decisiones, que protejan a las organizaciones de los riesgos económicos y contribuyan a lograr
+                        su competitividad en el entorno global.
+                    </p>
+                    <br>
+                    <p><strong>Te puede interesar si cuentas con:</strong></p>
+                    <ul>
+                        <li>Adaptabilidad y organización.</li>
+                        <li>Vocación de servicio sustentado en valores éticos y de responsabilidad.</li>
+                        <li>Discreción y confiabilidad en el desempeño de actividades.</li>
+                    </ul>
+                    <br>
+                    <p><strong>Al egresar contarás con el siguiente perfil:</strong>
+                        El egresado de la Licenciatura en Contaduría será capaz de administrar los recursos financieros
+                        de las organizaciones, mediante el registro oportuno de sus transacciones y la emisión de
+                        información en forma fehaciente, veraz y oportuna, de su situación financiera.
+                    </p>
+                    <br>
+                    <p><strong>El campo de trabajo puede ser:</strong>
+                        Ejercicio independiente de la profesión como consultor.
+                        Prestación de servicios profesionales en el sector público a nivel federal, estatal y municipal.
+                        Asesoría financiera a empresas generadoras de productos y prestadoras de servicios.
+                    </p>
+                    <br>
+                    <p><strong>Asignaturas por semestre:</strong>
+                    <div class="acordeon">
 
-    <!-- ===========================
+                        <!-- SEMESTRE 1 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Primer semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Contabilidad Básica</li>
+                                    <li>Administración General</li>
+                                    <li>Introducción al Derecho civil</li>
+                                    <li>Dinámica Psicosocial</li>
+                                    <li>Matemáticas Administrativas</li>
+                                    <li>Taller de Informática</li>
+                                    <li>Inglés I</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 2 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Segundo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Contabilidad Intermedia I</li>
+                                    <li>Administración de Recursos Humanos I</li>
+                                    <li>Derecho Constitucional, Administrativo e Internacional</li>
+                                    <li>Fundamentos de Investigación</li>
+                                    <li>Matemáticas Financieras</li>
+                                    <li>Taller de Informática II</li>
+                                    <li>Estadística Administrativa II</li>
+                                    <li>Inglés II</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 3 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Tercer semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Contabilidad Intermedia II</li>
+                                    <li>Administración de Recursos Humanos II</li>
+                                    <li>Derecho Laboral</li>
+                                    <li>Derecho Mercantil</li>
+                                    <li>Seminario de Ética</li>
+                                    <li>Economía Empresarial</li>
+                                    <li>Estadística Administrativa II</li>
+                                    <li>Inglés III</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 4 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Cuarto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Teoría Contable</li>
+                                    <li>Costos Históricos</li>
+                                    <li>Derecho Fiscal</li>
+                                    <li>Taller de Investigación I</li>
+                                    <li>Desarrollo Sustentable</li>
+                                    <li>Entorno Macroeconómico de las Organizaciones</li>
+                                    <li>Finanzas I</li>
+                                    <li>Inglés IV</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 5 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Quinto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Contabilidad Superior</li>
+                                    <li>Costos Predeterminados</li>
+                                    <li>Impuestos I</li>
+                                    <li>Comercio Exterior</li>
+                                    <li>Auditoría Financiera I</li>
+                                    <li>Economía Internacional</li>
+                                    <li>Finanzas II</li>
+                                    <li>Inglés V</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 6 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Sexto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Contabilidad de Sociedades</li>
+                                    <li>Presupuestos</li>
+                                    <li>Impuestos II</li>
+                                    <li>Taller de Investigación II</li>
+                                    <li>Auditoría Financiera II</li>
+                                    <li>Taller de Informática III</li>
+                                    <li>Finanzas III</li>
+                                    <li>Inglés VI</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 7 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Séptimo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Costos para la Toma de Decisiones</li>
+                                    <li>Impuestos III</li>
+                                    <li>Administración de Operaciones</li>
+                                    <li>Auditoría Fiscal</li>
+                                    <li>Seminario de Derecho Fiscal</li>
+                                    <li>Elaboración y Evaluación de Proyectos</li>
+                                    <li>Inglés VII</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 8 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Octavo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Seminario de Contaduría</li>
+                                    <li>Habilidades Directivas</li>
+                                    <li>Contabilidad Gubernamental</li>
+                                    <li>Taller de Prácticas Fiscales</li>
+                                    <li>Contabilidad Bancaria</li>
+                                    <li>Contabilidad Hotelera</li>
+                                    <li>Seminario de Titulación</li>
+                                    <li>Inglés Técnico I</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 9 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Noveno semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Residencia Profesional</li>
+                                    <li>Inglés Técnico II</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===========================
          CARRERA 2: SISTEMAS
          =========================== -->
-    <section class="carrera reverse">
-      <h2 style="text-align:right;">Ingeniería en Sistemas Computacionales</h2>
-      <div class="contenido">
-        
-        <!-- Imagen derecha -->
-        <img src="img/sistemas.jpg" alt="Ingeniería en Sistemas Computacionales">
+        <section class="carrera reverse">
+            <h2 style="text-align:right;">Ingeniería en Sistemas Computacionales</h2>
+            <div class="contenido">
 
-        <!-- Texto izquierda -->
-        <div class="texto">
-          <p><strong>Descripción:</strong> Aquí va la descripción oficial de la Ingeniería en Sistemas Computacionales.</p>
-          <br>
-          <p><strong>Asignaturas destacadas:</strong></p>
-          <ul>
-            <li>Desarrollo Web</li>
-            <li>Redes de Computadoras</li>
-            <li>Bases de Datos</li>
-          </ul>
-          <br>
-          <p><strong>Duración:</strong> X cuatrimestres</p>
-        </div>
-      </div>
-    </section>
+                <!-- Imagen derecha -->
+                <img src="img/carrers/isc.jpg" alt="Ingeniería en Sistemas Computacionales">
 
-    <!-- ===========================
+                <!-- Texto izquierda -->
+                <<div class="texto">
+                    <p><strong>Objetivo:</strong>
+                        Formar profesionales con un conocimiento sólido en técnicas de diseño y análisis de sistemas de
+                        información, así como el dominio de herramientas de programación, creación y configuración de
+                        ambientes distribuidos e ingeniería de software con el fin de construir sistemas informáticos.
+                    </p>
+                    <br>
+                    <p><strong>Te puede interesar si cuentas con:</strong></p>
+                    <ul>
+                        <li>Interés en desarrollar proyectos informáticos.</li>
+                    </ul>
+                    <br>
+                    <p><strong>Al egresar contarás con el siguiente perfil:</strong>
+                    <ul>
+                        <li>
+                            Desarrollar, implementar y administrara el software de sistemas o de aplicaciones que
+                            cumplan
+                            con los estándares de calidad con el fin de apoyar la productividad y competitividad de las
+                            organizaciones.
+                        </li>
+                        <li>
+                            Diseñar interfaces hombre- máquina y máquina-máquina para la automatización de sistemas
+                            electrónicos y/o mecánicos.
+                        </li>
+                        <li>
+                            Identificar las tecnologías de hardware proponiendo, desarrollando y manteniendo
+                            aplicaciones
+                            eficientes.
+                        </li>
+                        <li>
+                            Diseñar, desarrollar y administrar bases de datos conforme a los requerimientos definidos,
+                            normas organizacionales de manejo y seguridad de la información, utilizando tecnologías
+                            emergentes.
+                        </li>
+                        <li>
+                            Integrar soluciones computacionales con diferentes tecnologías, plataformas y/o
+                            dispositivos.
+                        </li>
+                    </ul>
+                    </p>
+                    <br>
+                    <p><strong>El campo de trabajo puede ser:</strong>
+                        Ejercicio independiente de la profesión a través de la implementación de la propia empresa.
+                        Asesoría a empresas generadoras de productos y prestadoras de servicios.
+                        Diseño de software, hardware y redes.
+                        Mantenimiento de redes y equipo de cómputo.
+                    </p>
+                    <br>
+                    <p><strong>Asignaturas por semestre:</strong>
+                    <div class="acordeon">
+
+                        <!-- SEMESTRE 1 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Primer semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Dibujo</li>
+                                    <li>Fundamentos de Programación</li>
+                                    <li>Matemáticas para Computación</li>
+                                    <li>Matemáticas I</li>
+                                    <li>Física I</li>
+                                    <li>Seminario de Ética</li>
+                                    <li>Introducción a la Ingeniería en Sistemas Computacionales</li>
+                                    <li>Inglés I</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 2 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Segundo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Probabilidad y Estadística</li>
+                                    <li>Programación Orientada a Objetos</li>
+                                    <li>Química</li>
+                                    <li>Matemáticas II</li>
+                                    <li>Fundamentos de Investigación</li>
+                                    <li>Desarrollo Sustentable</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 3 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Tercer semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Administración</li>
+                                    <li>Tópicos Selectos de Programación</li>
+                                    <li>Estructura de Datos</li>
+                                    <li>Matemáticas III</li>
+                                    <li>Física II</li>
+                                    <li>Matemáticas IV</li>
+                                    <li>Inglés III</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 4 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Cuarto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Teoría de la Computación</li>
+                                    <li>Taller de Investigación I</li>
+                                    <li>Fundamentos de Bases de Datos</li>
+                                    <li>Matemáticas V</li>
+                                    <li>Circuitos, Eléctricos y Electrónicos</li>
+                                    <li>Investigación de Operaciones</li>
+                                    <li>Inglés IV</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 5 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Quinto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Programación de Sistemas</li>
+                                    <li>Teoría de las Telecomunicaciones</li>
+                                    <li>Taller de Bases de Datos</li>
+                                    <li>Métodos Numéricos</li>
+                                    <li>Arquitectura de Computadoras</li>
+                                    <li>Lenguaje Ensamblador</li>
+                                    <li>Inglés V</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 6 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Sexto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Taller de Investigación II</li>
+                                    <li>Redes de Computadoras</li>
+                                    <li>Simulación</li>
+                                    <li>Fundamentos de Desarrollo de Sistemas</li>
+                                    <li>Interfaces</li>
+                                    <li>Inglés VI</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 7 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Séptimo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Programación WEB</li>
+                                    <li>Sistemas Operativos</li>
+                                    <li>Graficación</li>
+                                    <li>Planificación y Modelado</li>
+                                    <li>Contabilidad Financiera</li>
+                                    <li>Sistemas Operativos Distribuidos I</li>
+                                    <li>Inglés VII</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 8 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Octavo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Cultura Empresarial</li>
+                                    <li>Formulación y Evaluación de Proyectos de Intervención</li>
+                                    <li>Inteligencia Artificial I</li>
+                                    <li>Desarrollo de Proyectos de Software</li>
+                                    <li>Sistemas Operativos Distribuidos II</li>
+                                    <li>Aplicaciones WEB</li>
+                                    <li>Inglés Técnico I</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 9 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Noveno semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Residencia Profesional</li>
+                                    <li>Bases de Datos Distribuidas</li>
+                                    <li>Programación WEB con Bases de Datos</li>
+                                    <li>Inglés Técnico II</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    </p>
+                    <br>
+            </div>
+            </div>
+        </section>
+
+        <!-- ===========================
          CARRERA 3: INNOVACIÓN AGRÍCOLA
          =========================== -->
-    <section class="carrera">
-      <h2>Ingeniería en Innovación Agrícola Sustentable</h2>
-      <div class="contenido">
+        <section class="carrera">
+            <h2>Ingeniería en Innovación Agrícola Sustentable</h2>
+            <div class="contenido">
 
-        <!-- Imagen izquierda -->
-        <img src="img/agricola.jpg" alt="Ingeniería en Innovación Agrícola Sustentable">
+                <!-- Imagen izquierda -->
+                <img src="img/carrers/iias.jpg" alt="Ingeniería en Innovación Agrícola Sustentable">
 
-        <!-- Texto derecha -->
-        <div class="texto">
-          <p><strong>Descripción:</strong> Aquí va la descripción oficial de la Ingeniería en Innovación Agrícola Sustentable.</p>
-          <br>
-          <p><strong>Asignaturas destacadas:</strong></p>
-          <ul>
-            <li>Agroecología</li>
-            <li>Sistemas de Riego</li>
-            <li>Tecnologías Sustentables</li>
-          </ul>
-          <br>
-          <p><strong>Duración:</strong> X cuatrimestres</p>
-        </div>
+                <!-- Texto derecha -->
+                <div class="texto">
+                    <p><strong>Objetivo:</strong>
+                        Formar profesionistas con alto sentido humanista y de servicio en la disciplina de Ingeniería en
+                        Innovación Agrícola Sustentable, a través de la integración multidisciplinaria de teorías,
+                        métodos y técnicas que le permitan diseñar, instrumentar, optimizar, administrar e innovar
+                        sistemas de producción, productos y servicios agrícolas, con enfoque sustentable,
+                        responsabilidad ética y compromiso social.
+                    </p>
+                    <br>
+                    <p><strong>Está orientado a:</strong>
+                        El programa educativo de Ingeniería en Innovación Agrícola Sustentable está dirigido a jóvenes
+                        interesados en una formación en el área de Ingeniería y Tecnología.
+                    </p>
+                    <br>
+                    <p><strong>Al egresar contarás con el siguiente perfil:</strong>
+                        Los egresados/as en Ingeniería en Innovación Agrícola Sustentable, desarrollan innovaciones en
+                        los sectores productivos y servicios agrícolas, basados en sistemas de producción protegidas y
+                        no protegidas, considerando condiciones ecológicas y socioeconómicas de cada región.
+                    </p>
+                    <br>
+                    <p><strong>El campo de trabajo puede ser:</strong>
+                        Dependencias gubernamentales en el diseño de políticas, planes y estrategias en el uso
+                        sustentable de los recursos naturales, actividades de producción agrícola, riego, nutrición,
+                        manejo de plagas, enfermedades, entre otras.
+                        Organizaciones no gubernamentales en el diseño, instrumentación y operación de cultivos
+                        orgánicos e invernaderos con enfoque sustentable.
+                    </p>
+                    <br>
+                    <p><strong>Asignaturas por semestre:</strong>
+                        <!-- Lista de semestres con materias (HTML) -->
+                    <div class="acordeon">
 
-      </div>
-    </section>
+                        <!-- SEMESTRE 1 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Primer semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Matemáticas</li>
+                                    <li>Química</li>
+                                    <li>Taller de Elementos de Mecánica de Sólidos</li>
+                                    <li>Biología</li>
+                                    <li>Introducción a las Tecnologías de la Información</li>
+                                    <li>Seminario de Ética</li>
+                                    <li>Desarrollo Sustentable</li>
+                                    <li>Inglés I</li>
+                                </ul>
+                            </div>
+                        </div>
 
-  </main>
+                        <!-- SEMESTRE 2 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Segundo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Matemáticas II</li>
+                                    <li>Química Analítica</li>
+                                    <li>Ecología</li>
+                                    <li>Elementos de Termodinámica</li>
+                                    <li>Botánica Aplicada</li>
+                                    <li>Estadística</li>
+                                    <li>Fundamentos de Investigación</li>
+                                    <li>Inglés II</li>
+                                </ul>
+                            </div>
+                        </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Síguenos en redes sociales:</p>
-    <a href="#">Facebook</a>
-    <a href="#">YouTube</a>
-    <a href="#">Instagram</a>
-    <p>© Universidad Mexiquense del Bicentenario</p>
-  </footer>
+                        <!-- SEMESTRE 3 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Tercer semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Matemáticas III</li>
+                                    <li>Edafología</li>
+                                    <li>Diseño Agrícola Asistido por Computadora</li>
+                                    <li>Bioquímica</li>
+                                    <li>Principios de Electromecánica</li>
+                                    <li>Topografía</li>
+                                    <li>Métodos Estadísticos</li>
+                                    <li>Inglés III</li>
+                                </ul>
+                            </div>
+                        </div>
 
-<script>
-  const btn = document.getElementById("modo-btn");
+                        <!-- SEMESTRE 4 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Cuarto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Hidráulica</li>
+                                    <li>Agroclimatología</li>
+                                    <li>Diseños Experimentales</li>
+                                    <li>Fisiología Vegetal</li>
+                                    <li>Microbiología General</li>
+                                    <li>Bases de Datos y Sistemas de Información Geográfica</li>
+                                    <li>Taller de Investigación I</li>
+                                    <li>Inglés IV</li>
+                                </ul>
+                            </div>
+                        </div>
 
-  btn.onclick = () => {
-    document.body.classList.toggle("dark-mode");
+                        <!-- SEMESTRE 5 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Quinto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Biología Molecular</li>
+                                    <li>Nutrición Vegetal</li>
+                                    <li>Sistemas de Producción Agrícola</li>
+                                    <li>Entomología Agrícola</li>
+                                    <li>Fitopatología</li>
+                                    <li>Sistemas de Riego superficial</li>
+                                    <li>Inglés V</li>
+                                </ul>
+                            </div>
+                        </div>
 
-    btn.textContent =
-      document.body.classList.contains("dark-mode")
-      ? "Modo Claro"
-      : "Modo Oscuro";
-  };
-</script>
+                        <!-- SEMESTRE 6 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Sexto semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Desarrollo Comunitario</li>
+                                    <li>Sistemas de Riego Presurizado</li>
+                                    <li>Agroecología</li>
+                                    <li>Olericultura</li>
+                                    <li>Taller de Investigación II</li>
+                                    <li>Introducción a la Agricultura Protegida</li>
+                                    <li>Inglés VI</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 7 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Séptimo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Agronegocios I</li>
+                                    <li>Inocuidad Alimentario y Bioseguridad</li>
+                                    <li>Fertirrigación</li>
+                                    <li>Construcción y Manejo de Invernaderos</li>
+                                    <li>Reciclaje de Productos y Subproductos</li>
+                                    <li>Cultivos Hidropónicos</li>
+                                    <li>Inglés VII</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 8 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Octavo semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Agronegocios II</li>
+                                    <li>Plasticultura</li>
+                                    <li>Cosecha de Agua</li>
+                                    <li>Floricultura</li>
+                                    <li>Manejo de Poscosecha</li>
+                                    <li>Productos Orgánicos en la Agricultura</li>
+                                    <li>Inglés Técnico I</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SEMESTRE 9 -->
+                        <div class="semestre">
+                            <button class="acordeon-btn">Noveno semestre</button>
+                            <div class="acordeon-panel">
+                                <ul>
+                                    <li>Residencia Profesional</li>
+                                    <li>Seminario de Tesis</li>
+                                    <li>Inglés Técnico II</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Síguenos en redes sociales:</p>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
+        <p>© Universidad Mexiquense del Bicentenario</p>
+    </footer>
+
+    <script src="js/darkmode.js"></script>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
+
+        // Cerrar si el usuario toca fuera
+        document.addEventListener("click", (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.remove("open");
+            }
+        });
+    </script>
+
+    <script>
+        const acordeonBtns = document.querySelectorAll(".acordeon-btn");
+
+        acordeonBtns.forEach((btn) => {
+            btn.addEventListener("click", function () {
+
+                const panel = this.nextElementSibling;
+                const isOpen = panel.style.maxHeight;
+
+                // Cerrar todos los paneles
+                document.querySelectorAll(".acordeon-panel").forEach(p => p.style.maxHeight = null);
+
+                // Si el panel NO estaba abierto → abrir
+                if (!isOpen) {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+
 
 </body>
+
 </html>
