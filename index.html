@@ -11,61 +11,47 @@
 
 <body>
 
-    <!-- NAVBAR (igual que las otras páginas, glass effect) -->
     <nav class="navbar">
-        <!-- LOGO -->
-        <img src="img/icons/sanjose.png" alt="Logo UMB" />
+        <a href="/">
+            <img src="img/icons/sanjose.png" alt="Logo UMB" />
+        </a>
 
-        <!-- MENÚ NORMAL (solo PC) -->
         <ul id="menu" class="navbar-links">
-            <li><a href="index.html">Inicio</a></li>
             <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="#noticias">Noticias</a></li>
             <li><a href="beneficios.html">Beneficios</a></li>
             <li><a href="historia.html">Conócenos</a></li>
         </ul>
 
-        <!-- BOTÓN MODO OSCURO -->
         <button id="modo-btn">Modo Oscuro</button>
 
-        <!-- BOTÓN HAMBURGUESA (solo móvil) -->
         <button id="menu-btn" class="menu-btn">&#9777;</button>
     </nav>
 
-    <!-- MENÚ LATERAL -->
     <nav id="mobile-menu" class="mobile-menu">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
             <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="/#noticias">Noticias</a></li>
             <li><a href="beneficios.html">Beneficios</a></li>
             <li><a href="historia.html">Conócenos</a></li>
         </ul>
     </nav>
 
-
-    <!-- HERO (VIDEO) - altura 80% de la ventana -->
     <section class="hero">
-        <!-- Reemplaza la ruta por tu video real: /videos/campus.mp4 -->
         <video class="hero-video" src="videos/campus.mp4" autoplay muted loop playsinline
             poster="img/backgrounds/fondo_inicio.jpeg"></video>
 
-        <!-- overlay degradado negro -> transparente -->
         <div class="hero-overlay" aria-hidden="true"></div>
-
-        <!-- (opcional) si quieres texto arriba del hero habilítalo aquí -->
-        <!-- <div class="hero-text"><h1>Universidad Mexiquense del Bicentenario</h1></div> -->
     </section>
 
-    <!-- NOTICIAS -->
-    <section class="news-section" aria-label="Noticias recientes">
+    <section class="news-section" aria-label="Noticias recientes" id="noticias">
         <h2 class="section-title" style="color: var(--verde-oscuro);">Noticias</h2>
 
-        <!-- Flechas -->
         <button class="news-btn prev" aria-label="Anterior noticia">‹</button>
 
-        <!-- Contenedor del carrusel -->
         <div class="news-viewport">
             <div class="news-track" id="newsTrack">
-                <!-- NOTICIA 1 -->
+
                 <article class="news-card" tabindex="0">
                     <div class="card-inner">
                         <div class="card-front">
@@ -85,7 +71,6 @@
                     <h3 class="news-title left">Construcción de un nuevo edificio para la UES</h3>
                 </article>
 
-                <!-- NOTICIA 2 -->
                 <article class="news-card" tabindex="0">
                     <div class="card-inner">
                         <div class="card-front">
@@ -107,7 +92,6 @@
                     <h3 class="news-title left">4to torneo de guerra de robots</h3>
                 </article>
 
-                <!-- NOTICIA 2 -->
                 <article class="news-card" tabindex="0">
                     <div class="card-inner">
                         <div class="card-front">
@@ -125,19 +109,16 @@
                     <h3 class="news-title left">Concurso chico y chica UES 2025</h3>
                 </article>
 
-                <!-- (no agregues más tarjetas aquí, el JS clonará para el efecto infinito) -->
             </div>
         </div>
 
         <button class="news-btn next" aria-label="Siguiente noticia">›</button>
     </section>
 
-    <!-- FOOTER (igual en todas las páginas) -->
     <footer class="footer">
 
         <div class="footer-grid">
 
-            <!-- COLUMNA 1 → Datos de contacto (1) -->
             <div class="footer-col">
                 <h3>Contacto</h3>
                 <ul>
@@ -148,7 +129,6 @@
                 </ul>
             </div>
 
-            <!-- COLUMNA 2 → Datos de contacto (2) -->
             <div class="footer-col">
                 <h3>Información</h3>
                 <ul>
@@ -158,20 +138,16 @@
                 </ul>
             </div>
 
-            <!-- COLUMNA 3 → Mapa -->
             <div class="footer-col">
                 <h3>Ubicación</h3>
-                <!-- Aquí puedes insertar tu iframe de Google Maps -->
                 <div class="mapa">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.0764396116497!2d-100.14432692373792!3d19.666743981663235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2eccbc758302b%3A0x6277bfbed3b52399!2sUnidad%20de%20Estudios%20Superiores%2C%20San%20Jos%C3%A9%20del%20Rinc%C3%B3n!5e0!3m2!1sen!2smx!4v1763739371596!5m2!1sen!2smx"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                        width="600" height="450" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
-            <!-- COLUMNA 4 → Redes sociales -->
             <div class="footer-col">
                 <h3>Síguenos</h3>
                 <div class="social-links">
@@ -182,7 +158,7 @@
                     <a href="https://www.facebook.com/share/1CZ2YpafD7/" aria-label="YouTube UMB" title="UES San José del Rincón">
                         <img src="img/icons/facebook.png" alt="Página UMBSJR" title="Página UMBSJR">
                         Página UES San José del Rincón
-                    </a>                    
+                    </a>
                 </div>
                 <h3>Estudiantes inscritos</h3>
                 <div class="inscritos">
@@ -199,7 +175,6 @@
 
     </footer>
 
-    <!-- Scripts -->
     <script src="js/news.js"></script>
     <script src="js/darkmode.js"></script>
 
@@ -211,7 +186,6 @@
             mobileMenu.classList.toggle("open");
         });
 
-        // Cerrar si el usuario toca fuera
         document.addEventListener("click", (e) => {
             if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 mobileMenu.classList.remove("open");
