@@ -1,9 +1,7 @@
-// js/darkmode.js
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById('modo-btn');
   const body = document.body;
-
-  // Si quieres persistir la preferencia:
+  
   const saved = localStorage.getItem('umb-dark');
   if (saved === 'true') {
     body.classList.add('dark-mode');

@@ -726,7 +726,7 @@ body.dark .mobile-menu {
     color: #89d631
 }
 
-@media (max-width:850px) {
+@media (max-width:900px) {
     .menu-btn {
         display: block
     }
@@ -736,13 +736,13 @@ body.dark .mobile-menu {
     }
 }
 
-@media (min-width:851px) {
+@media (min-width:901px) {
     #mobile-menu {
         display: none
     }
 }
 
-@media (max-width:850px) {
+@media (max-width:900px) {
     #menu-btn {
         display: block !important
     }
