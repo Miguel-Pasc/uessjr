@@ -1026,3 +1026,7 @@ body.dark .mobile-menu {
     list-style-type: square;
     text-align: justify;
 }
+
+section, article {
+    display: block !important;
+}
