@@ -1,140 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Beneficios - UMB</title>
-  <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>Beneficios - UMB</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <img src="img/logo.png" alt="Logo UMB">
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="oferta.html">Oferta Académica</a></li>
-      <li><a href="beneficios.html">Beneficios</a></li>
-      <li><a href="historia.html">Historia</a></li>
-    </ul>
-    <button id="modo-btn">Modo Oscuro</button>
-  </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <img src="img/logo.png" alt="Logo UMB" />
 
-  <main>
+        <!-- MENÚ NORMAL (solo PC) -->
+        <ul id="menu" class="navbar-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="historia.html">Conócenos</a></li>
+        </ul>
 
-    <section class="beneficios-container">
+        <!-- BOTÓN MODO OSCURO -->
+        <button id="modo-btn">Modo Oscuro</button>
 
-      <h1 class="beneficios-titulo">Beneficios</h1>
+        <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+        <button id="menu-btn" class="menu-btn">&#9776;</button>
+    </nav>
 
-      <!-- Flechas -->
-      <button class="carrusel-btn btn-left" id="btn-left">&#10094;</button>
-      <button class="carrusel-btn btn-right" id="btn-right">&#10095;</button>
+    <!-- MENÚ LATERAL -->
+    <nav id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="historia.html">Conócenos</a></li>
+        </ul>
+    </nav>
 
-      <!-- Carrusel -->
-      <div class="carrusel">
-        <div class="carrusel-track" id="track">
 
-          <!-- Tarjeta 1 -->
-          <div class="beneficio">
-            <img src="img/becas.jpg" alt="Becas UMB">
-            <div class="info">
-              <h3>Becas</h3>
-              <p>Acceso a programas de apoyo económico según desempeño académico.</p>
+    <main>
+
+        <section class="beneficios-container">
+
+            <h1 class="beneficios-titulo">Beneficios</h1>
+
+            <!-- Flechas -->
+            <button class="carrusel-btn btn-left" id="btn-left">&#10094;</button>
+            <button class="carrusel-btn btn-right" id="btn-right">&#10095;</button>
+
+            <!-- Carrusel -->
+            <div class="carrusel">
+                <div class="carrusel-track" id="track">
+
+                    <!-- Tarjeta 1 -->
+                    <div class="beneficio">
+                        <img src="img/benefits/beca_jef.jpg" alt="Becas UMB">
+                        <div class="info">
+                            <h3>Becas</h3>
+                            <p>Acceso a programas de apoyo económico para todos los estudiantes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="beneficio">
+                        <img src="img/benefits/casa.jpeg" alt="Comedores UMB">
+                        <div class="info">
+                            <h3>Comedores y hospedaje</h3>
+                            <p>
+                                Cerca de la universidad se encuentra una casa
+                                comedor la cual brinda el apoyo de hospedaje y 
+                                alimentación a estudiantes que estén
+                                inscritos en la UES.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="beneficio">
+                        <img src="img/benefits/actividades.jpg" alt="Actividades UMB">
+                        <div class="info">
+                            <h3>Actividades</h3>
+                            <p>Eventos culturales, deportivos y talleres formativos.</p>
+                        </div>
+                    </div>                  
+                </div>
             </div>
-          </div>
 
-          <!-- Tarjeta 2 -->
-          <div class="beneficio">
-            <img src="img/comedores.jpg" alt="Comedores UMB">
-            <div class="info">
-              <h3>Comedores</h3>
-              <p>Servicio accesible para estudiantes con alimentos nutritivos.</p>
-            </div>
-          </div>
+        </section>
 
-          <!-- Tarjeta 3 -->
-          <div class="beneficio">
-            <img src="img/actividades.jpg" alt="Actividades UMB">
-            <div class="info">
-              <h3>Actividades</h3>
-              <p>Eventos culturales, deportivos y talleres formativos.</p>
-            </div>
-          </div>
+    </main>
 
-          <!-- Puedes agregar más tarjetas -->
-          <div class="beneficio">
-            <img src="img/biblioteca.jpg" alt="Biblioteca">
-            <div class="info">
-              <h3>Biblioteca</h3>
-              <p>Acceso a recursos digitales y físicos para el aprendizaje.</p>
-            </div>
-          </div>
+    <!-- FOOTER -->
+    <footer>
+        <p>Síguenos en redes sociales:</p>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
+        <p>© Universidad Mexiquense del Bicentenario</p>
+    </footer>
 
-        </div>
-      </div>
+    <script>
+        /* ===========================
+           CARRUSEL INFINITO
+           =========================== */
+        const track = document.getElementById("track");
+        const leftBtn = document.getElementById("btn-left");
+        const rightBtn = document.getElementById("btn-right");
 
-    </section>
+        // Función de mover una tarjeta a la izquierda
+        function moverIzquierda() {
+            track.prepend(track.lastElementChild);
+            track.style.transition = "none";
+            track.style.transform = "translateX(-340px)";
 
-  </main>
+            setTimeout(() => {
+                track.style.transition = "transform 0.5s ease";
+                track.style.transform = "translateX(0)";
+            });
+        }
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Síguenos en redes sociales:</p>
-    <a href="#">Facebook</a>
-    <a href="#">YouTube</a>
-    <a href="#">Instagram</a>
-    <p>© Universidad Mexiquense del Bicentenario</p>
-  </footer>
+        // Función de mover una tarjeta a la derecha
+        function moverDerecha() {
+            track.style.transition = "transform 0.5s ease";
+            track.style.transform = "translateX(-340px)";
 
-<script>
-  /* ===========================
-     MODO OSCURO
-     =========================== */
-  const btnModo = document.getElementById("modo-btn");
+            setTimeout(() => {
+                track.append(track.firstElementChild);
+                track.style.transition = "none";
+                track.style.transform = "translateX(0)";
+            }, 500);
+        }
 
-  btnModo.onclick = () => {
-    document.body.classList.toggle("dark-mode");
-    btnModo.textContent = 
-      document.body.classList.contains("dark-mode")
-      ? "Modo Claro"
-      : "Modo Oscuro";
-  };
+        leftBtn.addEventListener("click", moverIzquierda);
+        rightBtn.addEventListener("click", moverDerecha);
+    </script>
 
+    <script src="js/darkmode.js"></script>
 
-  /* ===========================
-     CARRUSEL INFINITO
-     =========================== */
-  const track = document.getElementById("track");
-  const leftBtn = document.getElementById("btn-left");
-  const rightBtn = document.getElementById("btn-right");
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-  // Función de mover una tarjeta a la izquierda
-  function moverIzquierda() {
-    track.prepend(track.lastElementChild);
-    track.style.transition = "none";
-    track.style.transform = "translateX(-340px)";
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
 
-    setTimeout(() => {
-      track.style.transition = "transform 0.5s ease";
-      track.style.transform = "translateX(0)";
-    });
-  }
+        // Cerrar si el usuario toca fuera
+        document.addEventListener("click", (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.remove("open");
+            }
+        });
+    </script>
 
-  // Función de mover una tarjeta a la derecha
-  function moverDerecha() {
-    track.style.transition = "transform 0.5s ease";
-    track.style.transform = "translateX(-340px)";
-
-    setTimeout(() => {
-      track.append(track.firstElementChild);
-      track.style.transition = "none";
-      track.style.transform = "translateX(0)";
-    }, 500);
-  }
-
-  leftBtn.addEventListener("click", moverIzquierda);
-  rightBtn.addEventListener("click", moverDerecha);
-</script>
 
 </body>
+
 </html>

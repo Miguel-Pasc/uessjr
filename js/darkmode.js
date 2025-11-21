@@ -7,16 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem('umb-dark');
   if (saved === 'true') {
     body.classList.add('dark-mode');
-    if (btn) btn.textContent = 'Modo Claro';
+    if (btn) btn.innerHTML = "<img src='/img/icons/sol.png' width='50px'>";
   } else {
-    if (btn) btn.textContent = 'Modo Oscuro';
+    if (btn) btn.innerHTML = "<img src='/img/icons/luna.png' width='50px'>";
   }
 
   if (!btn) return;
   btn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     const active = body.classList.contains('dark-mode');
-    btn.textContent = active ? 'Modo Claro' : 'Modo Oscuro';
+    btn.innerHTML = active ? 
+    "<img src='/img/icons/sol.png' width='50px'>" : 
+    "<img src='/img/icons/luna.png' width='50px'>";
     localStorage.setItem('umb-dark', active ? 'true' : 'false');
   });
 });

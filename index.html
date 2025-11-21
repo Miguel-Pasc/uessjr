@@ -1,92 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inicio - Universidad Mexiquense del Bicentenario</title>
-  <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Inicio - Universidad Mexiquense del Bicentenario</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="/img/icons/UMB.webp" type="image/x-icon">
 </head>
+
 <body>
 
-  <!-- NAVBAR (igual que las otras páginas, glass effect) -->
-  <nav>
-    <img src="img/logo.png" alt="Logo UMB" />
-    <ul id="menu">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="oferta.html">Oferta Académica</a></li>
-      <li><a href="beneficios.html">Beneficios</a></li>
-      <li><a href="historia.html">Conócenos</a></li>
-    </ul>
-    <button id="modo-btn">Modo Oscuro</button>
-    <button id="menu-toggle" aria-label="Abrir menú" style="display:none">☰</button>
-  </nav>
+    <!-- NAVBAR (igual que las otras páginas, glass effect) -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <img src="img/icons/sanjose.png" alt="Logo UMB" />
 
-  <!-- HERO (VIDEO) - altura 80% de la ventana -->
-  <section class="hero">
-    <!-- Reemplaza la ruta por tu video real: /videos/campus.mp4 -->
-    <video class="hero-video" src="videos/campus.mp4" autoplay muted loop playsinline></video>
+        <!-- MENÚ NORMAL (solo PC) -->
+        <ul id="menu" class="navbar-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="historia.html">Conócenos</a></li>
+        </ul>
 
-    <!-- overlay degradado negro -> transparente -->
-    <div class="hero-overlay" aria-hidden="true"></div>
+        <!-- BOTÓN MODO OSCURO -->
+        <button id="modo-btn">Modo Oscuro</button>
 
-    <!-- (opcional) si quieres texto arriba del hero habilítalo aquí -->
-    <!-- <div class="hero-text"><h1>Universidad Mexiquense del Bicentenario</h1></div> -->
-  </section>
+        <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+        <button id="menu-btn" class="menu-btn">&#9777;</button>
+    </nav>
 
-  <!-- NOTICIAS -->
-  <section class="news-section" aria-label="Noticias recientes">
-    <h2 class="section-title">Noticias</h2>
+    <!-- MENÚ LATERAL -->
+    <nav id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="oferta.html">Oferta Académica</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="historia.html">Conócenos</a></li>
+        </ul>
+    </nav>
 
-    <!-- Flechas -->
-    <button class="news-btn prev" aria-label="Anterior noticia">‹</button>
 
-    <!-- Contenedor del carrusel -->
-    <div class="news-viewport">
-      <div class="news-track" id="newsTrack">
-        <!-- NOTICIA 1 -->
-        <article class="news-card" tabindex="0">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="img/noticia1.jpg" alt="Noticia 1: título breve">
+    <!-- HERO (VIDEO) - altura 80% de la ventana -->
+    <section class="hero">
+        <!-- Reemplaza la ruta por tu video real: /videos/campus.mp4 -->
+        <video class="hero-video" src="videos/campus.mp4" autoplay muted loop playsinline
+            poster="img/backgrounds/fondo_inicio.jpeg"></video>
+
+        <!-- overlay degradado negro -> transparente -->
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <!-- (opcional) si quieres texto arriba del hero habilítalo aquí -->
+        <!-- <div class="hero-text"><h1>Universidad Mexiquense del Bicentenario</h1></div> -->
+    </section>
+
+    <!-- NOTICIAS -->
+    <section class="news-section" aria-label="Noticias recientes">
+        <h2 class="section-title" style="color: var(--verde-oscuro);">Noticias</h2>
+
+        <!-- Flechas -->
+        <button class="news-btn prev" aria-label="Anterior noticia">‹</button>
+
+        <!-- Contenedor del carrusel -->
+        <div class="news-viewport">
+            <div class="news-track" id="newsTrack">
+                <!-- NOTICIA 1 -->
+                <article class="news-card" tabindex="0">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="img/news/noticia1.jpeg" alt="Noticia 1: título breve">
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align: justify;">
+                                En la Unidad de Estudios Superiores San José del Rincón se firmó un convenio para
+                                iniciar con la construcción de un nuevo edificio para poder albergar a todos los
+                                estudiantes inscritos en la institución, al igual que se busca agregar una nueva carrera
+                                profesional a la unidad, de esta manera la institución crecerá en tamaño para poder
+                                tener todos los espacios como aulas y laboratorios necesarios para el correcto
+                                desarrollo de las actividades de los estudiantes.
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="news-title left">Construcción de un nuevo edificio para la UES</h3>
+                </article>
+
+                <!-- NOTICIA 2 -->
+                <article class="news-card" tabindex="0">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="img/news/noticia2.jpeg" alt="Noticia 2: título breve">
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align: justify;">
+                                La unidad de estudios ha participado en diversos eventos de concursos de robots y ha
+                                sido sede de algunos de ellos, anteriormente ha realizado tres concursos de guerras de
+                                robots en edifición sumo de robots por tres años consecutivos, el cuarto año no
+                                desarrollo alguna actividad acorde a la guerra de robots, sin embargo, participó en un
+                                concurso de edición destrucción de robots, llevado acabo en la Universidad Politécnica
+                                de Atlacomulco (UPA) llevándose el primer lugar, por lo cual en esta ocasión sera sede
+                                de una cuarta guerra de robots, edición destrucción de robots, invitanto a otras
+                                universidades a competir.
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="news-title left">4to torneo de guerra de robots</h3>
+                </article>
+
+                <!-- NOTICIA 2 -->
+                <article class="news-card" tabindex="0">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="img/news/noticia3.jpeg" alt="Noticia 3: título breve">
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align: justify;">
+                                En ocasiones pasadas se han realizado eventos referente a elegir una representante de
+                                cada unidad de estudios, conocida como señorita UES, sin embargo, en esta ocasión se
+                                hará algo distinto, se realizará un concurso para elegir tanto a una chica como a un
+                                chico que serán representantes de la unidad, el chico y chica UES.
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="news-title left">Concurso chico y chica UES 2025</h3>
+                </article>
+
+                <!-- (no agregues más tarjetas aquí, el JS clonará para el efecto infinito) -->
             </div>
-            <div class="card-back">
-              <p>Breve descripción de la noticia 1. Aquí va un resumen atractivo de la actividad.</p>
-            </div>
-          </div>
-          <h3 class="news-title left">Título de Noticia 1</h3>
-        </article>
+        </div>
 
-        <!-- NOTICIA 2 -->
-        <article class="news-card" tabindex="0">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="img/noticia2.jpg" alt="Noticia 2: título breve">
-            </div>
-            <div class="card-back">
-              <p>Breve descripción de la noticia 2. Información relevante para visitantes.</p>
-            </div>
-          </div>
-          <h3 class="news-title left">Título de Noticia 2</h3>
-        </article>
+        <button class="news-btn next" aria-label="Siguiente noticia">›</button>
+    </section>
 
-        <!-- (no agregues más tarjetas aquí, el JS clonará para el efecto infinito) -->
-      </div>
-    </div>
+    <!-- FOOTER (igual en todas las páginas) -->
+    <footer>
+        <p>Síguenos en redes sociales:</p>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <p>© Universidad Mexiquense del Bicentenario</p>
+    </footer>
 
-    <button class="news-btn next" aria-label="Siguiente noticia">›</button>
-  </section>
+    <!-- Scripts -->
+    <script src="js/news.js"></script>
+    <script src="js/darkmode.js"></script>
 
-  <!-- FOOTER (igual en todas las páginas) -->
-  <footer>
-    <p>Síguenos en redes sociales:</p>
-    <a href="#" aria-label="Facebook">Facebook</a>
-    <a href="#" aria-label="YouTube">YouTube</a>
-    <a href="#" aria-label="Instagram">Instagram</a>
-    <p>© Universidad Mexiquense del Bicentenario</p>
-  </footer>
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-  <!-- Scripts -->
-  <script src="js/news.js"></script>
-  <script src="js/darkmode.js"></script>
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
+
+        // Cerrar si el usuario toca fuera
+        document.addEventListener("click", (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.remove("open");
+            }
+        });
+    </script>
+
 </body>
+
 </html>
